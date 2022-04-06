@@ -1,0 +1,131 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+/*----------------------- Navbar-Section--------------------------- */
+.dropdown-item:active{
+    background-color: rgb(180, 169, 187) !important;
+}
+.navbar{
+    /* background: linear-gradient(to bottom,rgb(228, 228, 228),rgb(255, 255, 255)) !important; */
+    background-color: #f7f7f7 !important;
+    box-shadow: 0 .2rem .2rem rgba(0, 0, 0, .2);
+    padding: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    z-index: 10000;
+   
+}
+.navbar-transparent{
+    background: linear-gradient(to bottom,rgba(228, 228, 228, 0.694),rgba(255, 255, 255, 0.694)) !important;
+    transition: .5s ease-in;
+}
+.navbar:hover{
+    background-color: white;
+}
+.nav-item a.nav-link{
+    font-size: 18px;
+    color:black !important ;
+    margin-left: 2rem !important;
+}
+.navbar .navbar-brand{
+    font-weight: 500;
+}
+.nav-item a:hover{
+    color:rgb(187, 178, 206) !important ;
+}
+.nav-logo{
+    border-radius: 50%;
+    padding: 5px;
+}
+.navbar-light .navbar-toggler{
+    border: none;
+}
+.navbar-light .navbar-toggler:focus{
+    outline: none;
+}
+
+.fund{
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 73rem;
+    margin-bottom: 4px;
+}
+
+.head{
+    font-size: 18px;
+    margin: auto;
+    width: 20%;
+    border: 1px solid #e0e1e3;
+    border-top: none;
+    background: hsla(210,4%,89%,.2);
+    border-radius: 8px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    line-height: 50px;
+}
+
+#register{
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#register input{
+    margin-bottom: 15px;
+    margin-right: 13rem;
+}
+
+.select{
+    width: 24%;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    align-items: center;
+}
+
+.text-label{
+    padding: .7rem;
+    /* width: 215%; */
+    display: inline-block;
+    color: black;
+}
+
+.text-field{
+    padding: .7rem;
+    width: 140%;
+    display: inline-block;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(236, 236, 241);
+    
+}
+
+#photo{
+    margin-top: 1rem;
+    margin-left: 6rem;
+}
+
+
+#btn1{
+    line-height: 31px;
+    margin-left: 39rem;
+    margin-top: 2rem;
+    border-radius: 14px;
+
+    display: inline-block;
+    width: 120px;
+    background: #fff;
+    font-size: 15px;
+    color: #9c3353;
+}
+
+#btn1:hover{
+    background: #9c3353;
+    color: white;
+}
