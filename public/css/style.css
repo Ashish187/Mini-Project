@@ -124,7 +124,7 @@
 
 .sec-2{
     width: 93rem;
-    height: 1200px;
+    height: 127px;
     margin-top: 5rem;
 }
 
@@ -189,6 +189,7 @@
     flex-wrap: wrap;
     margin-top: 2rem;
     margin-right: 14rem;
+    text-decoration: none;
 }
 
 .container1 .campaign-list .campaign-list-card{
@@ -196,10 +197,43 @@
     box-shadow: 0 4px 10px 0 rgb(156 51 83 / 30%);
     border-radius: 8px;
     margin-top: 3rem;
+    border: 2px solid red;
+    height: 450px;
+    text-decoration: none;
+    color: black;
+}
+
+.container1 .campaign-list .campaign-list-card .img1{
+    width: 100%;
+    height: 250px;
+   border-top-left-radius: 8px;
+   border-top-right-radius: 8px;
 }
 
 
-.container1 .campaign-list .campaign-list-card a{
+
+
+.container1 .campaign-list .campaign-list-card .topic{
+    margin-left: 10px;
+    line-height: 25px;
+    margin-top: 0.5rem;
+}
+
+.container1 .campaign-list .campaign-list-card .create{
+   margin-left: 10px;
+    line-height: 25px;
+    margin-top: 1rem;
+}
+
+.container1 .campaign-list .campaign-list-card .line{
+   margin-top: 1rem;
+   border-left: 4px solid rgb(199, 12, 12);
+   padding-left: 10px;
+   margin-left: 10px;
+}
+
+
+/* .container1 .campaign-list .campaign-list-card{
     text-decoration: none;
     color: black;
  }
@@ -238,7 +272,7 @@
     border-left: 4px solid rgb(199, 12, 12);
     padding-left: 10px;
     margin-left: 10px;
-}
+} */
 
 .fund{
     display: flex;

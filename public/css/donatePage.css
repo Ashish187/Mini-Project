@@ -10,12 +10,12 @@
 }
 
 /* .donate-grid .donate-1{
-    border: 2px solid red;
+    margin-bottom: 5rem;
 } */
 
 .donate-grid .donate-1 .img1{
     width: 100%;
-     height: 450px;
+    height: 450px;
     border-radius: 8px;
     margin-top: 3rem;
     margin-left: 5rem;
@@ -26,6 +26,20 @@
     margin-left: 5rem;
 }
 
+.donate-grid .pay{
+    /* border: 2px solid red; */
+    /* width: 30%;
+    line-height: 30%; */
+    margin-left: 4rem;
+    margin-top: 2rem;
+}
+
+.donate-grid .pay .btn-1{
+    width: 42%;
+    height: 34px;
+    /* margin-left: 5rem;
+    padding-top: 10rem; */
+}
 .head{
     text-align: center;
     font-size: 18px;

@@ -17,6 +17,8 @@ var firebaseConfig = {
       var topic = document.querySelector('.donate-grid')
       var _tag = document.createElement('div')
       _tag.classList.add('donate-1')
+      var _tag1 = document.createElement('div')
+      _tag1.classList.add('pay')
       // var inp = document.createElement('input')
       // inp.setAttribute("type","hidden")
       // inp.setAttribute("value","<%=pageName%>")
@@ -29,6 +31,10 @@ var firebaseConfig = {
       image1.classList.add('img1')
       var para = document.createElement('p')
       para.classList.add('para1')
+      var btn = document.createElement('button')
+      
+      btn.classList.add('btn-1')
+
 
       let uname = object.name
       let image = object.photo
@@ -42,12 +48,14 @@ var firebaseConfig = {
       let info = "";
       _tag.innerHTML = info;
       // _tag.appendChild(inp)
+      _tag1.appendChild(btn)
       _tag.appendChild(main)
       _tag.appendChild(create)
       _tag.appendChild(image1)
       _tag.appendChild(para)
+      topic.appendChild(_tag1)
       topic.appendChild(_tag)
-
+      
     })
     
   }
