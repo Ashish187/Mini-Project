@@ -19,10 +19,6 @@ var firebaseConfig = {
       _tag.classList.add('donate-1')
       var _tag1 = document.createElement('div')
       _tag1.classList.add('pay')
-      // var inp = document.createElement('input')
-      // inp.setAttribute("type","hidden")
-      // inp.setAttribute("value","<%=pageName%>")
-      // inp.classList.add('page')
       var create = document.createElement('h3')
       create.classList.add('head2')
       var main = document.createElement('h1')
@@ -31,9 +27,13 @@ var firebaseConfig = {
       image1.classList.add('img1')
       var para = document.createElement('p')
       para.classList.add('para1')
+      var donate = document.createElement('h3')
+      donate.classList.add('head-1')
+      var line = document.createElement('div')
+      line.classList.add('line')
       var btn = document.createElement('button')
-      
       btn.classList.add('btn-1')
+    
 
 
       let uname = object.name
@@ -42,21 +42,67 @@ var firebaseConfig = {
       create.innerText = "Help "+`${uname}`
       para.innerText = `${desc}`
       main.innerHTML = "iSupport will not charge any fee on your donation to this campaign"
+      btn.innerText = "Donate Now"
+      donate.innerHTML = "Donate"
+      line.innerText = "Recieve tax benefits by donating to this cause"
       image1.style.background = `url("${image}")`;
       image1.style.backgroundSize="cover";
 
       let info = "";
       _tag.innerHTML = info;
       // _tag.appendChild(inp)
+      _tag1.appendChild(donate)
+      _tag1.appendChild(line)
       _tag1.appendChild(btn)
       _tag.appendChild(main)
       _tag.appendChild(create)
       _tag.appendChild(image1)
       _tag.appendChild(para)
-      topic.appendChild(_tag1)
       topic.appendChild(_tag)
-      
+      topic.appendChild(_tag1)
+      const payLink = document.querySelector('.btn-1')
+      payLink.addEventListener('click',function(e){
+      rzp1.open();
+      e.preventDefault();
+  })
+        
     })
     
   }
   fetchData();
+  var options = {
+    "key": "rzp_test_70lQ9aNlffkPrZ", // Enter the Key ID generated from the Dashboard
+    "amount": "500", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+    "currency": "INR",
+    "name": "Acme Corp",
+    "description": "Test Transaction",
+    "image": "https://example.com/your_logo",
+    "order_id": "order_JIWvFWjOxYopjF", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+    "handler": function (response){
+        alert(response.razorpay_payment_id);
+        alert(response.razorpay_order_id);
+        alert(response.razorpay_signature)
+    },
+    "prefill": {
+        "name": "Ashish",
+        "email": "ashishanand16086@gmail.com",
+        "contact": "9999999999"
+    },
+    "notes": {
+        "address": "Razorpay Corporate Office"
+    },
+    "theme": {
+        "color": "#3399cc"
+    }
+};
+var rzp1 = new Razorpay(options);
+rzp1.on('payment.failed', function (response){
+        alert(response.error.code);
+        alert(response.error.description);
+        alert(response.error.source);
+        alert(response.error.step);
+        alert(response.error.reason);
+        alert(response.error.metadata.order_id);
+        alert(response.error.metadata.payment_id);
+});
+

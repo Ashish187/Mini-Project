@@ -14,7 +14,7 @@
 } */
 
 .donate-grid .donate-1 .img1{
-    width: 100%;
+    width: 89.5%;
     height: 450px;
     border-radius: 8px;
     margin-top: 3rem;
@@ -27,16 +27,20 @@
 }
 
 .donate-grid .pay{
+    width: 50%;
+    box-shadow: 0 4px 10px 0 rgb(156 51 83 / 30%);
+    border-radius: 8px;
+    margin-top: 3rem;
+    margin-left: 16rem;
     /* border: 2px solid red; */
-    /* width: 30%;
-    line-height: 30%; */
-    margin-left: 4rem;
-    margin-top: 2rem;
+    height: 80vh;
 }
 
 .donate-grid .pay .btn-1{
     width: 42%;
     height: 34px;
+    margin-top: 10rem;
+    margin-left: 7.2rem;
     /* margin-left: 5rem;
     padding-top: 10rem; */
 }
@@ -57,4 +61,16 @@
 .head2{
     margin-top: 3rem;
     margin-left: 5rem;
+}
+
+.head-1{
+    padding-left: 2rem;
+}
+
+.line{
+    margin-top: 4rem;
+    border-left: 4px solid rgb(199, 12, 12);
+    padding-left: 10px;
+    font-size: 20px;
+    margin-left: 10px;
 }
