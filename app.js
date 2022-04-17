@@ -1,4 +1,6 @@
 const express = require('express')
+const bodeParser = require('body-parser')
+
 const ejs = require('ejs')
 const app = express()
 
@@ -8,6 +10,8 @@ const PORT = process.env.PORT || 2000
 app.set('view engine','ejs')
 
 app.use(express.static(__dirname + '/public'))
+app.use(bodeParser.urlencoded({ extended: false}))
+app.use(bodeParser.json())
 
 app.get('/',(req,res)=>{
     res.render('index')

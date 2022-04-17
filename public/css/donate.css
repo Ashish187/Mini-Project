@@ -22,7 +22,6 @@
     box-shadow: 0 4px 10px 0 rgb(156 51 83 / 30%);
     border-radius: 8px;
     margin-top: 3rem;
-    border: 2px solid red;
     height: 450px;
     text-decoration: none;
     color: black;
@@ -77,4 +76,47 @@
     border-left: 4px solid rgb(199, 12, 12);
     padding-left: 10px;
     margin-left: 10px;
+}
+
+@media(max-width: 1430px){
+    .container1{
+        margin-left: 25rem;
+    }
+    .container1 .campaign-list{
+        display: grid;
+        grid-template-columns: 500px 500px;
+        /* padding-left: 4rem; */
+    }
+
+    .container1 .campaign-list .campaign-list-card{
+        width: 80%;
+    }
+}
+
+@media(max-width: 875px){
+    .container1{
+        margin-left: 0rem;
+    }
+
+    .container1 .campaign-list{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .container1 .campaign-list .campaign-list-card{
+        width: 80%;
+        margin-left: 12rem;
+    }
+}
+
+@media(max-width: 492px){
+
+    .container1{
+        margin-left: 6rem;
+    }
+
+    .container1 .campaign-list .campaign-list-card {
+        width: 174%;
+        margin-left: 1rem;
+    }
 }

@@ -1,4 +1,4 @@
-  var firebaseConfig = {
+ var firebaseConfig = {
     apiKey: "AIzaSyCSKrvjJksd-jjW-7Hdsekgu5CnjDM_J7A",
     authDomain: "userdetails-6f435.firebaseapp.com",
     databaseURL: "https://userdetails-6f435-default-rtdb.europe-west1.firebasedatabase.app",
@@ -9,6 +9,8 @@
   };
 
   firebase.initializeApp(firebaseConfig);
+
+ 
 
   document.querySelector("#register").addEventListener("submit", submitForm);
 
@@ -25,6 +27,11 @@
     console.log(name, cause, email, phone, tag, description, photo);
   
     saveDetails(name, cause, email, phone, tag, description, photo);
+
+    firebase.auth().currentUser.sendEmailVerification()
+    .then(() => {
+      
+    });
   
     document.querySelector("#register").reset();
   }
