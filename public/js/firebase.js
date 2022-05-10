@@ -27,13 +27,9 @@
     console.log(name, cause, email, phone, tag, description, photo);
   
     saveDetails(name, cause, email, phone, tag, description, photo);
-
-    firebase.auth().currentUser.sendEmailVerification()
-    .then(() => {
-      
-    });
   
     document.querySelector("#register").reset();
+    alert("Successfully Submitted")
   }
 
   let info = firebase.database().ref("details/"+name);
