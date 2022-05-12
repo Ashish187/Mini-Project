@@ -22,11 +22,12 @@
     var cause = document.querySelector('#cause').value;
     var phone = document.querySelector('#phone').value;
     var tag = document.querySelector('#tag').value;
+    var money = document.querySelector('#money').value;
     var description = document.querySelector('#description').value;
     var photo = document.querySelector('#photo').value;
-    console.log(name, cause, email, phone, tag, description, photo);
+    console.log(name, cause, email, phone, tag, money, description, photo);
   
-    saveDetails(name, cause, email, phone, tag, description, photo);
+    saveDetails(name, cause, email, phone, tag, money,  description, photo);
   
     document.querySelector("#register").reset();
     alert("Successfully Submitted")
@@ -35,7 +36,7 @@
   let info = firebase.database().ref("details/"+name);
   
 
-function saveDetails(name, cause, email, phone, tag, description, photo) {
+function saveDetails(name, cause, email, phone, tag, money,  description, photo) {
     let newInfo = info.push();
 
     const ref = firebase.storage().ref()
@@ -75,6 +76,7 @@ function saveDetails(name, cause, email, phone, tag, description, photo) {
         email: email,
         phone: phone,
         tag: tag,
+        money: money,
         description: description,
         photo: downloadURL,
     });

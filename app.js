@@ -1,5 +1,6 @@
 const express = require('express')
 const bodeParser = require('body-parser')
+const Razorpay = require('razorpay')
 
 const ejs = require('ejs')
 const app = express()
@@ -28,7 +29,17 @@ app.get('/details',(req,res)=>{
 app.get('/donatePage/:page',(req,res)=>{
     var pageName = req.params.page;
     console.log(pageName);
-    res.render('donatePage',{pageName:pageName})
+    var instance = new Razorpay({ key_id: 'rzp_test_70lQ9aNlffkPrZ', key_secret: 'ptvRS0pE71oG2lrsRbKWeEFf' })
+
+    var order = instance.orders.create({
+     amount: 50000,
+     currency: "INR",
+     receipt: "receipt#1",
+    }).then(object=>{
+        console.log(object.id);
+        res.render('donatePage',{pageName:pageName,orderId:object.id})
+    })
+   
 })
 
 app.listen(PORT,()=>{

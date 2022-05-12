@@ -17,7 +17,7 @@
     <form id="register">
         <div class="form-div">
             
-            <input class="text-field" id="name" placeholder="Name" name="name">
+            <input class="text-field" id="name" placeholder="Name" name="name" required>
            </div>
 
            <div class="form-div select">
@@ -25,7 +25,7 @@
                   
             <label class="text-label" for="cause">I am raising funds for a/an </label>
 
-            <select style = "width: 100%;padding: .5rem;border-radius: 1rem;background-color: rgb(236, 236, 241);" name="year" id="cause">
+            <select style = "width: 100%;padding: .5rem;border-radius: 1rem;background-color: rgb(236, 236, 241);" name="year" id="cause" required>
               <option value="COVID-19">COVID-19</option>
               <option value="Medical">Medical</option>
               <option value="Education">Education</option>
@@ -35,22 +35,26 @@
           </div>
           <div class="form-div">
                   
-            <input class="text-field" id="email" placeholder="Email" type="email" name="email">
+            <input class="text-field" id="email" placeholder="Email" type="email" name="email" required>
            </div>
 
            <div class="form-div">
-            <input class="text-field" id="phone" type="text" name="phone" placeholder="Phone Number" pattern="^\d{10}$">
+            <input class="text-field" id="phone" type="number" name="phone" placeholder="Phone Number" pattern="^\d{10}$" required>
           </div>
            <div class="form-div">
-            <input class="text-field" id="tag" type="text" name="tag" placeholder="Give the tag line for the cause">
+            <input class="text-field" id="tag" type="text" name="tag" placeholder="Give the tag line for the cause" required>
           </div>
 
           <div class="form-div">
-              <textarea name="message" class="text-field" id="description" cols="50" rows="10" placeholder="Enter the short description of your cause..."></textarea>
+            <input class="text-field" id="money" type="number" name="tag" placeholder="How much do you want to raise" required>
           </div>
 
           <div class="form-div">
-          <input type="file" id="photo">
+              <textarea name="message" class="text-field" id="description" cols="50" rows="10" placeholder="Enter the short description of your cause..."></textarea required>
+          </div>
+
+          <div class="form-div">
+          <input type="file" id="photo" required>
           
           <!-- <button onclick="uploadImage()">Upload Image</button> -->
           </div>

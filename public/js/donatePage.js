@@ -47,6 +47,7 @@ var firebaseConfig = {
       line.innerText = "Recieve tax benefits by donating to this cause"
       image1.style.background = `url("${image}")`;
       image1.style.backgroundSize="cover";
+      var order_id = document.querySelector("#order_id");
 
       let info = "";
       _tag.innerHTML = info;
@@ -77,7 +78,7 @@ var firebaseConfig = {
     "name": "Acme Corp",
     "description": "Test Transaction",
     "image": "https://example.com/your_logo",
-    "order_id": "order_JP1pWn8pPLiKAW", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+    "order_id": order_id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
     "handler": function (response){
         alert(response.razorpay_payment_id);
         alert(response.razorpay_order_id);
