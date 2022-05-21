@@ -26,11 +26,16 @@
     var description = document.querySelector('#description').value;
     var photo = document.querySelector('#photo').value;
     console.log(name, cause, email, phone, tag, money, description, photo);
-  
-    saveDetails(name, cause, email, phone, tag, money,  description, photo);
-  
-    document.querySelector("#register").reset();
-    alert("Successfully Submitted")
+    if(money<=2000){
+      alert("Amount should be greater than 2000")
+    }
+    
+    else{
+      saveDetails(name, cause, email, phone, tag, money,  description, photo);
+      document.querySelector("#register").reset();
+      alert("Successfully Submitted")
+    }
+    
   }
 
   let info = firebase.database().ref("details/"+name);

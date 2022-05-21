@@ -9,6 +9,84 @@
     grid-template-columns: 2fr 2fr;
 }
 
+.donate-grid .donate-1 .progress{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    width: 441px;
+    height: 157px;
+    margin-top: 1rem;
+    /* margin-left: rem; */
+    background: white;
+}
+
+.donate-grid .donate-1 .progress .money{
+    padding-left: 3rem;
+    padding-top: 2rem;
+    font-weight: bolder;
+    font-size: 28px;
+}
+.circle-wrap {
+    margin: 0px auto;
+    width: 100px;
+    height: 100px;
+    /* background: #fefcff; */
+    border-radius: 50%;
+    /* border: 1px solid #cdcbd0; */
+  }
+  
+  .circle-wrap .circle .mask,
+  .circle-wrap .circle .fill {
+      /* width: 150px;
+      height: 150px; */
+      width: 126px;
+      height: 128px;
+    position: absolute;
+    border-radius: 50%;
+  }
+  
+  .circle-wrap .circle .mask {
+    clip: rect(0px, 150px, 150px, 75px);
+  }
+  
+  .circle-wrap .inside-circle {
+    /* width: 122px;
+    height: 122px; */
+    width: 95px;
+      height: 96px;
+    border-radius: 50%;
+    background: #d2eaf1;
+    line-height: 104px;
+    text-align: center;
+    margin-top: 14px;
+    margin-left: 14px;
+    color: #1e51dc;
+    position: absolute;
+    z-index: 100;
+    font-weight: 700;
+    font-size: 2em;
+  }
+  
+  .mask .fill {
+    clip: rect(0px, 75px, 150px, 0px);
+    /* background-color: #227ded; */
+    background-color: #1e51dc;
+  }
+  
+  .mask.full,
+  .circle .fill {
+    animation: fill ease-in-out 3s;
+    transform: rotate(135deg);
+  }
+  
+  @keyframes fill{
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(135deg);
+    }
+  }
+
 /* .donate-grid .donate-1{
     margin-bottom: 5rem;
 } */
@@ -22,7 +100,7 @@
 }
 
 .donate-grid .donate-1 .para1{
-    margin-top: 3rem;
+    /* margin-top: 8rem; */
     margin-left: 5rem;
 }
 

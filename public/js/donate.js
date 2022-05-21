@@ -58,28 +58,11 @@ var firebaseConfig = {
       var insideCircle = document.createElement('div')
       insideCircle.classList.add('inside-circle')
 
-      var number = document.createElement('div')
-      number.classList.add('number')
       var money = document.createElement('div')
       money.classList.add('money')
       var line = document.createElement('div')
       line.classList.add('line')
 
-    //   var start = setInterval(update,100)
-    //   var upto = 1;
-  
-    // function update(){
-    //   var counter = document.querySelector('.number')
-    //   var counts = upto++
-    //   if(upto>75){
-    //     clearInterval(start)
-    //   }
-    //   counter.innerHTML = counts + "%"
-    //   document.querySelector('.outer').style.background = `conic-gradient(#4070f4 ${counts}%,#fff ${counts}%)`
-    // }
-
-    
-      
       // let childObjectKeys = Object.keys(object[arr[i]]);
       
       let image = object[arr[i]].photo;
@@ -138,16 +121,3 @@ var firebaseConfig = {
     })
   }
   fetchData();
-
-  // var start = setInterval(update,100)
-  // var upto = 1;
-
-  // function update(){
-  //   var counter = document.querySelector('.number')
-  //   var counts = upto++
-  //   if(upto>75){
-  //     clearInterval(start)
-  //   }
-  //   counter.innerHTML = counts + "%"
-  //   document.querySelector('.outer').style.background = `conic-gradient(#4070f4 ${counts}%,#fff ${counts}%)`
-  // }
