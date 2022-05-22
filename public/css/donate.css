@@ -51,7 +51,7 @@ body {
   position: absolute;
   z-index: 100;
   font-weight: 700;
-  font-size: 2em;
+  font-size: 2rem;
 }
 
 .mask .fill {

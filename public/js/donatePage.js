@@ -10,11 +10,11 @@ var firebaseConfig = {
 
   firebase.initializeApp(firebaseConfig);
 
-  function fetchData(){
-    firebase.database().ref(`details/${pageName}`).once("value",(snapshot)=>{
+    firebase.database().ref(`details/${pageName}`).on("value",(snapshot)=>{
       console.log(snapshot.val());
       let object = snapshot.val();
       var topic = document.querySelector('.donate-grid')
+      topic.innerHTML="";
       var _tag = document.createElement('div')
       _tag.classList.add('donate-1')
       var _tag1 = document.createElement('div')
@@ -59,27 +59,28 @@ var firebaseConfig = {
       var insideCircle = document.createElement('div')
       insideCircle.classList.add('inside-circle')
 
-      var money = document.createElement('div')
-      money.classList.add('money')
+      var divmoney = document.createElement('div')
+      divmoney.classList.add('money')
 
 
-      let uname = object.name
-      let image = object.photo
-      let desc = object.description
-      let umoney = object.money
-      let uphone = object.phone
-      let umail = object.email
-      let s=0;
-      create.innerText = "Help "+`${uname}`
-      para.innerText = `${desc}`
+      let name = object.name
+      let photo = object.photo
+      let description = object.description
+      let tag = object.tag
+      let cause = object.cause
+      let money = object.money
+      let phone = object.phone
+      let email = object.email
+      create.innerText = "Help "+`${name}`
+      para.innerText = `${description}`
       main.innerHTML = "iSupport will not charge any fee on your donation to this campaign"
       btn.innerText = "Donate Now"
       donate.innerHTML = "Donate"
       line.innerText = "Recieve tax benefits by donating to this cause"
       
-      image1.style.background = `url("${image}")`;
+      image1.style.background = `url("${photo}")`;
       image1.style.backgroundSize="cover";
-      money.innerHTML = "Raised\n"+`Rs.${s} of ${umoney}`
+      divmoney.innerHTML = "Raised\n"+`of Rs.${money}`
       insideCircle.innerHTML = "0%"
       var order_id = document.querySelector("#order_id");
 
@@ -94,7 +95,7 @@ var firebaseConfig = {
       circle.appendChild(insideCircle)
       maskHalf.appendChild(fill1)
       progress.appendChild(circleWrap)
-      progress.appendChild(money)
+      progress.appendChild(divmoney)
       _tag1.appendChild(line)
       _tag1.appendChild(btn)
       _tag.appendChild(main)
@@ -121,21 +122,24 @@ var firebaseConfig = {
     
     "handler": function (response){
         alert(response.razorpay_payment_id);
-        alert(response.razorpay_order_id);
-        alert(response.razorpay_signature)
+        // alert(response.razorpay_order_id);
+        // alert(response.razorpay_signature)
         
         if(response.razorpay_payment_id){
-          while(s<umoney){
-            money.innerHTML = "Raised\n"+`Rs.${s+500} of ${umoney-500}`
-          }
-          
+            var updates = {
+              money: money-500
+            }
+            firebase.database().ref(`details/${pageName}`).update(updates)
+
+            console.log(money);
         }
+        console.log(response.razorpay_payment_id);
     },
     
     "prefill": {
-        "name": uname,
-        "email": umail,
-        "contact": uphone
+        "name": name,
+        "email": email,
+        "contact": phone
     },
     "notes": {
         "address": "Razorpay Corporate Office"
@@ -159,6 +163,4 @@ rzp1.on('payment.failed', function (response){
 
 })
     
-  }
-  fetchData();
  
