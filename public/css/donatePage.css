@@ -66,26 +66,26 @@
     font-size: 2em;
   }
   
-  .mask .fill {
+  /* .mask .fill {
     clip: rect(0px, 75px, 150px, 0px);
-    /* background-color: #227ded; */
     background-color: #1e51dc;
-  }
+  } */
   
-  .mask.full,
+  /* .mask.full,
   .circle .fill {
     animation: fill ease-in-out 3s;
     transform: rotate(135deg);
-  }
+    1e51dc
+  } */
   
-  @keyframes fill{
+  /* @keyframes fill{
     0% {
       transform: rotate(0deg);
     }
     100% {
       transform: rotate(135deg);
     }
-  }
+  } */
 
 /* .donate-grid .donate-1{
     margin-bottom: 5rem;

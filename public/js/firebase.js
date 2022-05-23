@@ -23,15 +23,16 @@
     var phone = document.querySelector('#phone').value;
     var tag = document.querySelector('#tag').value;
     var money = document.querySelector('#money').value;
+    var updateMoney = document.querySelector('#money1').value;
     var description = document.querySelector('#description').value;
     var photo = document.querySelector('#photo').value;
-    console.log(name, cause, email, phone, tag, money, description, photo);
+    console.log(name, cause, email, phone, tag, money,updateMoney, description, photo);
     if(money<=2000){
       alert("Amount should be greater than 2000")
     }
     
     else{
-      saveDetails(name, cause, email, phone, tag, money,  description, photo);
+      saveDetails(name, cause, email, phone, tag, money,updateMoney,  description, photo);
       document.querySelector("#register").reset();
       alert("Successfully Submitted")
     }
@@ -41,7 +42,7 @@
   let info = firebase.database().ref("details/"+name);
   
 
-function saveDetails(name, cause, email, phone, tag, money,  description, photo) {
+function saveDetails(name, cause, email, phone, tag, money,updateMoney,  description, photo) {
     let newInfo = info.push();
 
     const ref = firebase.storage().ref()
@@ -82,6 +83,7 @@ function saveDetails(name, cause, email, phone, tag, money,  description, photo)
         phone: phone,
         tag: tag,
         money: money,
+        updateMoney: updateMoney,
         description: description,
         photo: downloadURL,
     });
