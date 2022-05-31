@@ -84,19 +84,24 @@ var firebaseConfig = {
       
       image1.style.background = `url("${photo}")`;
       image1.style.backgroundSize="cover";
-      divmoney.innerHTML = "Raised\n"+`of Rs.${money}`
       let c=0;
-            while (newmoney!=updateMoney) {
-              newmoney=newmoney+500
-              c++;
-            }
+      if(newmoney>0){
+        while (newmoney!=updateMoney && newmoney>0) {
+          newmoney=newmoney+500
+          c++;
+        }
+        divmoney.innerHTML = "Raised\n"+`of Rs.${money}`
+        let n=y*c
+        let m=n.toFixed(1)
+            insideCircle.innerHTML = `${m}%`
+      }
+      
+      if(money<=0){
+        divmoney.innerHTML = "Raised\n"+`of Rs.${0}`
+        insideCircle.innerHTML = `${100}%`
+        firebase.database().ref(`details/${pageName}`).remove()
+      }
       console.log(money);
-      console.log(updateMoney);
-      console.log(y);
-      console.log(c);
-      let n=y*c
-            insideCircle.innerHTML = `${n.toFixed(1)}%`
-            
       var order_id = document.querySelector("#order_id");
 
       let info = "";
@@ -120,23 +125,6 @@ var firebaseConfig = {
       _tag.appendChild(para)
       topic.appendChild(_tag)
       topic.appendChild(_tag1)
-    //   var i = 0;
-    // var elem = document.querySelector(".mask");
-    // var w = 0;
-    // var id = setInterval(frame, 1000);
-    // function frame() {
-    //   if (w >= 100) {
-    //     clearInterval(id);
-    //     // i = 0;
-    //   } else {
-    //     w=w+n
-    //     elem.style.width = w+'vw';
-    //     console.log(n);
-    //     console.log(w);
-    //     elem.style.clip = "rect(0px, 75px, 150px, 0px)";
-    //     elem.style.background = "#1e51dc"
-    //   }
-    // }
       const payLink = document.querySelector('.btn-1')
       payLink.addEventListener('click',function(e){
       rzp1.open()
@@ -160,6 +148,7 @@ var firebaseConfig = {
             var updates = {
               money: money-500
             }
+            
             firebase.database().ref(`details/${pageName}`).update(updates)
             
   // }
