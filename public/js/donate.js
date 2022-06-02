@@ -68,16 +68,35 @@ var firebaseConfig = {
       let image = object[arr[i]].photo;
       let uname = object[arr[i]].name
       let umoney = object[arr[i]].money
-      
+      let updateMoney = object[arr[i]].updateMoney
+      let newmoney = umoney;
+      let x=updateMoney/500;
+      let y=100/x;
       console.log(image)
+      let c=0;
+      if(newmoney>0){
+        while (newmoney!=updateMoney && newmoney>0) {
+          newmoney=newmoney+500
+          c++;
+        }
+        money.innerHTML = "Raised "+`${umoney}`
+        let n=y*c
+        let m=n.toFixed(1)
+            insideCircle.innerHTML = `${m}%`
+      }
       
+      if(umoney<=0){
+        money.innerHTML = "Raised "+`${0}`
+        insideCircle.innerHTML = `${100}%`
+        // firebase.database().ref(`details/${pageName}`).remove()
+      }
       image1.style.background = `url("${image}")`;
       image1.style.backgroundSize="cover";
       _tag.setAttribute("href",`/donatePage/${arr[i]}`)
       main.innerHTML = "Save Lives against the COVID-19 second wave"
       create.innerText = "Created By\n"+`${uname}`
-      money.innerHTML = "Raised "+`${umoney}`
-      insideCircle.innerHTML = "75%"
+      // money.innerHTML = "Raised "+`${umoney}`
+      // insideCircle.innerHTML = "75%"
       line.innerText = "Recieve tax benefits by donating to this cause"
       
       let info = "";
@@ -103,20 +122,6 @@ var firebaseConfig = {
       _tag.appendChild(line)
       topic.appendChild(_tag)
 
-    //   var start = setInterval(update,100)
-    //   var upto = 1;
-  
-    // function update(){
-    //   // var counter = document.querySelector('.number')
-    //   var counts = upto++
-    //   if(upto>75){
-    //     clearInterval(start)
-    //   }
-    //   number.innerHTML = counts + "%"
-    //   outer.style.background = `conic-gradient(#4070f4 ${counts}%,#fff ${counts}%)`
-    // }
-      
-      // console.log(arr[i].photo)
     }
     })
   }

@@ -4,6 +4,50 @@
     box-sizing: border-box;
 }
 
+.dropdown-item:active{
+  background-color: rgb(180, 169, 187) !important;
+}
+.navbar{
+  /* background: linear-gradient(to bottom,rgb(228, 228, 228),rgb(255, 255, 255)) !important; */
+  background-color: #f7f7f7 !important;
+  box-shadow: 0 .2rem .2rem rgba(0, 0, 0, .2);
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  z-index: 10000;
+ 
+}
+.navbar-transparent{
+  background: linear-gradient(to bottom,rgba(228, 228, 228, 0.694),rgba(255, 255, 255, 0.694)) !important;
+  transition: .5s ease-in;
+}
+.navbar:hover{
+  background-color: white;
+}
+.nav-item a.nav-link{
+  font-size: 18px;
+  color:black !important ;
+  margin-left: 2rem !important;
+}
+.navbar .navbar-brand{
+  font-weight: 500;
+}
+.nav-item a:hover{
+  color:rgb(187, 178, 206) !important ;
+}
+.nav-logo{
+  border-radius: 50%;
+  padding: 5px;
+}
+.navbar-light .navbar-toggler{
+  border: none;;
+}
+.navbar-light .navbar-toggler:focus{
+  outline: none;
+}
+
 .donate-grid{
     display: grid;
     grid-template-columns: 2fr 2fr;
