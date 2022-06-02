@@ -20,12 +20,27 @@ var firebaseConfig = {
      
      let object = snapshot.val();
     let arr = Object.keys(snapshot.val())
+    // var refineSearch = document.querySelector('.refine-search')
+    // var btn = document.createElement('button')
+    //   btn.classList.add('btn1')
+    const open = document.getElementById('open')
+     const modal_container = document.getElementById('modal_container')
+     const close = document.getElementById('close')
+      open.addEventListener('click',()=>{
+          modal_container.classList.toggle('show')
+      })
+      close.addEventListener('click',()=>{
+          modal_container.classList.remove('show')
+      })
+
     for(let i=0;i<arr.length;i++){
       var topic = document.querySelector('.campaign-list')
       var _tag = document.createElement('a')
       _tag.classList.add('campaign-list-card')
       var image1 = document.createElement('div')
       image1.classList.add('img1')
+      var mainhead = document.createElement('h1')
+      mainhead.classList.add('head')
       var main = document.createElement('div')
       main.classList.add('topic')
       var raise = document.createElement('div')
@@ -120,6 +135,7 @@ var firebaseConfig = {
       raise.appendChild(create)
       raise.appendChild(progress)
       _tag.appendChild(line)
+      
       topic.appendChild(_tag)
 
     }

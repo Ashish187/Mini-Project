@@ -194,25 +194,3 @@ rzp1.on('payment.failed', function (response){
         alert(response.error.metadata.payment_id);
 });
 })
-// var transporter = nodemailer.createTransport({
-//   service: 'gmail',
-//   auth: {
-//     user: 'ashishanand16086@gmail.com',
-//     pass: 'tumkur@123456'
-//   }
-// });
-
-// var mailOptions = {
-//   from: 'ashishanand16086@gmail.com',
-//   to: email,
-//   subject: 'Sending Email using Node.js',
-//   text: 'That was easy!'
-// };
-
-// transporter.sendMail(mailOptions, function(error, info){
-//   if (error) {
-//     console.log(error);
-//   } else {
-//     console.log('Email sent: ' + info.response);
-//   }
-// });

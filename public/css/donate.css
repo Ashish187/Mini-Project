@@ -55,6 +55,67 @@ body {
 .navbar-light .navbar-toggler:focus{
   outline: none;
 }
+
+.refine-search{
+  margin-left: 74rem;
+  margin-bottom: -53px;
+}
+#open{
+  border-radius: 20px;
+  padding: 9px 23px;
+    line-height: 9px;
+    min-width: 204px;
+    min-height: 40px;
+  margin-top: 30px;
+  color: #9c3353;
+  background-color: #fff;
+  border: 1px solid #9c3353;
+}
+.modal-container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modals{
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: o 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 30px 50px;
+  width: 600px;
+  max-width: 100%;
+  text-align: center;
+}
+
+
+#open:hover{
+  box-shadow: 0 0 6px 0 rgb(156 51 83 / 20%);
+}
+
+.modals h1{
+  margin: 0;
+}
+
+.modals p{
+  opacity: 0.7;
+}
+
+.modal-container .show{
+  pointer-events: auto;
+  opacity: 1;
+}
+
+
+
+
 .circle-wrap {
   margin: 0px auto;
   width: 100px;
@@ -70,8 +131,8 @@ body {
     height: 150px; */
     width: 126px;
     height: 128px;
-  position: absolute;
-  border-radius: 50%;
+    position: absolute;
+    border-radius: 50%;
 }
 
 .circle-wrap .circle .mask {
@@ -79,10 +140,8 @@ body {
 }
 
 .circle-wrap .inside-circle {
-  /* width: 122px;
-  height: 122px; */
   width: 95px;
-    height: 96px;
+  height: 96px;
   border-radius: 50%;
   background: #d2eaf1;
   line-height: 104px;
@@ -95,26 +154,6 @@ body {
   font-weight: 700;
   font-size: 2rem;
 }
-
-/* .mask .fill {
-  clip: rect(0px, 75px, 150px, 0px);
-  background-color: #1e51dc;
-}
-
-.mask.full,
-.circle .fill {
-  animation: fill ease-in-out 3s;
-  transform: rotate(135deg);
-}
-
-@keyframes fill{
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(135deg);
-  }
-} */
 
 .container1{
     margin-left: 14rem;
@@ -137,6 +176,21 @@ body {
     height: 550px;
     text-decoration: none;
     color: black;
+}
+
+.head{
+  text-align: center;
+  font-size: 18px;
+  margin: auto;
+  width: 80%;
+  border: 1px solid #e0e1e3;
+  border-top: none;
+  background: hsla(210,4%,89%,.2);
+  border-radius: 8px;
+  border-top-left-radius: 0;
+
+  border-top-right-radius: 0;
+  line-height: 50px;
 }
 
 
