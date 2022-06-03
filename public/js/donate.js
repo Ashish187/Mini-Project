@@ -20,18 +20,6 @@ var firebaseConfig = {
      
      let object = snapshot.val();
     let arr = Object.keys(snapshot.val())
-    // var refineSearch = document.querySelector('.refine-search')
-    // var btn = document.createElement('button')
-    //   btn.classList.add('btn1')
-    const open = document.getElementById('open')
-     const modal_container = document.getElementById('modal_container')
-     const close = document.getElementById('close')
-      open.addEventListener('click',()=>{
-          modal_container.classList.toggle('show')
-      })
-      close.addEventListener('click',()=>{
-          modal_container.classList.remove('show')
-      })
 
     for(let i=0;i<arr.length;i++){
       var topic = document.querySelector('.campaign-list')
