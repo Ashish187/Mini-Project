@@ -20,7 +20,7 @@
     <div class="popup" id="popup-1">
         <div class="overlays"></div>
         <div class="content">
-            <button class="close-btn" onclick="togglePopup()">Cancel</button>
+            
             <h4>Filter & Sort</h4>
             <div class="sort">
                 <div class="title">
@@ -35,7 +35,7 @@
                     <div class="sort-options">
                         <p class="sort-option">
                             <label>
-                                <input class="with-gap" name="Highest Raised" type="radio">
+                                <input class="with-gap" id="ischeck" name="Highest Raised" type="radio">
                                 <span>Highest Raised</span>
                             </label>
                         </p>
@@ -57,6 +57,11 @@
                     <li class="category">Others</li>
                 </ul>
             </div>
+            <div class="btn2">
+                <button class="close-btn" onclick="togglePopup()">Cancel</button>
+                <button class="apply-btn">Apply</button>
+            </div>
+            
         </div>
     </div>
     <div class="refine-search">

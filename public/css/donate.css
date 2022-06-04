@@ -148,9 +148,11 @@ body {
     /* color: black; */
     font-weight: 600;
 }
+
 .subtitle2 .head1{
   margin-right: 13rem;
 }
+
 .subtitle2 .desc{
   color: #6c6c6c;
   margin-right: 1.2rem;
@@ -171,7 +173,11 @@ ul .category{
   background-color: #e1dcdc;
 
 }
- .popup .close-btn{
+
+.btn2{
+  display: flex;
+}
+ .btn2 .close-btn{
    position: absolute;
    right: 300px;
    top: 655px;
@@ -186,6 +192,21 @@ ul .category{
    line-height: 10px;
    text-align: center;
    /* border-radius: 20px; */
+ }
+ .btn2 .apply-btn{
+   position: absolute;
+   right: 117px;
+   top: 655px;
+   min-width: 104px;
+    min-height: 40px;
+    color: #fff;
+    background-color: #9c3353;
+    border-radius: 25px;
+  border: none;
+   font-size: 20px;
+   font-weight: 600;
+   line-height: 5px;
+   text-align: center;
  }
 
  .popup.active .overlays{

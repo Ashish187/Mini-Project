@@ -8,21 +8,10 @@ var firebaseConfig = {
     appId: "1:12992489187:web:81dcbf0e2687a5e43a07d6"
   };
 
-  firebase.initializeApp(firebaseConfig);
-  
-  function fetchData(){
-    firebase.database().ref("details/").once("value",function(snapshot){
-      let c=0
-      snapshot.forEach((childSnapshot)=>{
-        c++;
-        // console.log(childSnapshot.)
-     })
-     
-     let object = snapshot.val();
-    let arr = Object.keys(snapshot.val())
-
+  function createList(object,arr){
+    var topic = document.querySelector('.campaign-list')
+    topic.innerHTML="";
     for(let i=0;i<arr.length;i++){
-      var topic = document.querySelector('.campaign-list')
       var _tag = document.createElement('a')
       _tag.classList.add('campaign-list-card')
       var image1 = document.createElement('div')
@@ -75,7 +64,7 @@ var firebaseConfig = {
       let newmoney = umoney;
       let x=updateMoney/500;
       let y=100/x;
-      console.log(image)
+      // console.log(image)
       let c=0;
       if(newmoney>0){
         while (newmoney!=updateMoney && newmoney>0) {
@@ -125,7 +114,52 @@ var firebaseConfig = {
       _tag.appendChild(line)
       
       topic.appendChild(_tag)
+  }
+}
 
+  firebase.initializeApp(firebaseConfig);
+  
+  function fetchData(){
+    firebase.database().ref("details/").once("value",function(snapshot){
+      let c=0
+      snapshot.forEach((childSnapshot)=>{
+        c++;
+        // console.log(childSnapshot.)
+     })
+     
+     let object = snapshot.val();
+    let arr = Object.keys(snapshot.val())
+   
+    // createList(object,arr);
+    console.log(object,arr);
+    let n = arr.length
+    console.log(n);
+
+    var applyBtn = document.querySelector('.apply-btn')
+
+    applyBtn.addEventListener('click',()=>{
+      if(document.getElementById('ischeck').checked){
+        for(let i=0;i<n-1;i++){
+          for(let j=0;j<n-i-1;j++){
+            if(object[arr[j]].money<object[arr[j+1]].money){
+              let temp=object[arr[j]]
+              object[arr[j]]=object[arr[j+1]]
+              object[arr[j+1]]=temp
+            }
+          }
+        }
+        document.getElementById('popup-1').classList.remove("active")
+        createList(object,arr);
+      }
+    })
+    
+    console.log(object,arr);
+    
+    createList(object,arr);
+
+    // console.log(object);
+    for(let k=0;k<n;k++){
+      console.log(object[arr[k]].money);
     }
     })
   }
