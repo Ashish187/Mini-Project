@@ -9,6 +9,7 @@ var firebaseConfig = {
   };
 
   function createList(object,arr){
+    console.log(object,arr);
     var topic = document.querySelector('.campaign-list')
     topic.innerHTML="";
     for(let i=0;i<arr.length;i++){
@@ -84,7 +85,8 @@ var firebaseConfig = {
       }
       image1.style.background = `url("${image}")`;
       image1.style.backgroundSize="cover";
-      _tag.setAttribute("href",`/donatePage/${arr[i]}`)
+      // console.log(arr[i]);
+      _tag.setAttribute("href",`/donatePage/${object[arr[i]].id}`)
       main.innerHTML = "Save Lives against the COVID-19 second wave"
       create.innerText = "Created By\n"+`${uname}`
       // money.innerHTML = "Raised "+`${umoney}`
@@ -121,6 +123,7 @@ var firebaseConfig = {
   
   function fetchData(){
     firebase.database().ref("details/").once("value",function(snapshot){
+      // console.log(snapshot.key);
       let c=0
       snapshot.forEach((childSnapshot)=>{
         c++;
@@ -131,13 +134,14 @@ var firebaseConfig = {
     let arr = Object.keys(snapshot.val())
    
     // createList(object,arr);
-    console.log(object,arr);
+    // console.log(object,arr);
     let n = arr.length
-    console.log(n);
+    createList(object,arr);
 
     var applyBtn = document.querySelector('.apply-btn')
 
     applyBtn.addEventListener('click',()=>{
+      var newObject = {};
       if(document.getElementById('ischeck').checked){
         for(let i=0;i<n-1;i++){
           for(let j=0;j<n-i-1;j++){
@@ -149,18 +153,22 @@ var firebaseConfig = {
           }
         }
         document.getElementById('popup-1').classList.remove("active")
-        createList(object,arr);
+        var newarr = Object.keys(object)
+        // console.log(newarr,object);
+        createList(object,newarr);
       }
+      // else
+      // createList(object,arr);
     })
     
-    console.log(object,arr);
+    // console.log(object,arr);
     
-    createList(object,arr);
+  
 
     // console.log(object);
-    for(let k=0;k<n;k++){
-      console.log(object[arr[k]].money);
-    }
+    // for(let k=0;k<n;k++){
+    //   console.log(object[arr[k]].money);
+    // }
     })
   }
   fetchData();

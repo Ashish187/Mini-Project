@@ -26,32 +26,32 @@ app.get('/donate',(req,res)=>{
 app.get('/details',(req,res)=>{
     res.render('details')
 })
-app.post('/api/mail',(req,res)=>{
-    console.log(req);
-    var transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-          user: 'ashishanand16086@gmail.com',
-          pass: 'tumkur@123456'
-        }
-      });
+// app.post('/api/mail',(req,res)=>{
+//     console.log(req);
+//     var transporter = nodemailer.createTransport({
+//         service: 'gmail',
+//         auth: {
+//           user: 'ashishanand16086@gmail.com',
+//           pass: 'tumkur@123456'
+//         }
+//       });
       
-      var mailOptions = {
-        from: 'ashishanand16086@gmail.com',
-        to: req.body.to,
-        subject: 'Sending Email using Node.js',
-        text: 'That was easy!'
-      };
+//       var mailOptions = {
+//         from: 'ashishanand16086@gmail.com',
+//         to: req.body.to,
+//         subject: 'Sending Email using Node.js',
+//         text: 'That was easy!'
+//       };
       
-      transporter.sendMail(mailOptions, function(error, info){
-        if (error) {
-          console.log(error);
-        } else {
-            res.send({status:"success"});
-          console.log('Email sent: ' + info.response);
-        }
-      });
-})
+//       transporter.sendMail(mailOptions, function(error, info){
+//         if (error) {
+//           console.log(error);
+//         } else {
+//             res.send({status:"success"});
+//           console.log('Email sent: ' + info.response);
+//         }
+//       });
+// })
 
 app.get('/donatePage/:page',(req,res)=>{
     var pageName = req.params.page;

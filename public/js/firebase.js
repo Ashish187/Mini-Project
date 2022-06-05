@@ -7,10 +7,9 @@
     messagingSenderId: "12992489187",
     appId: "1:12992489187:web:81dcbf0e2687a5e43a07d6"
   };
-
   firebase.initializeApp(firebaseConfig);
+  
 
- 
 
   document.querySelector("#register").addEventListener("submit", submitForm);
 
@@ -30,6 +29,10 @@
     if(money<=2000){
       alert("Amount should be greater than 2000")
     }
+
+    if(money!=updateMoney){
+      alert("Please write the right amount")
+    }
     
     else{
       saveDetails(name, cause, email, phone, tag, money,updateMoney,  description, photo);
@@ -39,11 +42,12 @@
     
   }
 
-  let info = firebase.database().ref("details/"+name);
+ 
   
 
 function saveDetails(name, cause, email, phone, tag, money,updateMoney,  description, photo) {
-    let newInfo = info.push();
+   let info = firebase.database().ref("details/");
+    let newInfo = info.push().key;
 
     const ref = firebase.storage().ref()
 
@@ -76,9 +80,10 @@ function saveDetails(name, cause, email, phone, tag, money,updateMoney,  descrip
   () => {
     uploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {
       console.log('File available at', downloadURL);
-      newInfo.set({
+      info.child(newInfo).set({
         name: name,
         cause: cause,
+        id:newInfo,
         email: email,
         phone: phone,
         tag: tag,

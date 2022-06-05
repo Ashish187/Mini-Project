@@ -13,7 +13,8 @@ var firebaseConfig = {
 
 
   function fetchData(){
-    firebase.database().ref("details/").once("value",function(snapshot){
+    firebase.database().ref("details").once("value",function(snapshot){
+        console.log(snapshot.val());
         let c=0
         snapshot.forEach((childSnapshot)=>{
           c++;
@@ -22,8 +23,9 @@ var firebaseConfig = {
     
        let object = snapshot.val();
        let arr = Object.keys(snapshot.val())
-
-       for(let i=0;i<6;i++){
+      
+      //  console.log(c);
+       for(let i=0;i<Math.min(arr.length,6);i++){
         var topic = document.querySelector('.campaign-list')
         var _tag = document.createElement('a')
         _tag.classList.add('campaign-list-card')

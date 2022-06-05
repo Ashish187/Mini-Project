@@ -76,6 +76,8 @@ var firebaseConfig = {
       let phone = object.phone
       let email = object.email
       let newmoney = money;
+      console.log(newmoney);
+      console.log(updateMoney);
       let x=updateMoney/500;
       let y=100/x;
       create.innerText = "Help "+`${name}`
@@ -155,18 +157,18 @@ var firebaseConfig = {
             var updates = {
               money: money-500
             }
-            let options = {
-              method: 'POST',
-              body:JSON.stringify(data)
-          }
-          let fetchRes = fetch(
-            "http://localhost:2000/api/mail",options);
-                    fetchRes.then(res =>
-                        res.json()).then(d => {
-                            console.log(d)
-                        })
+          //   let options = {
+          //     method: 'POST',
+          //     body:JSON.stringify(data)
+          // }
+          // let fetchRes = fetch(
+          //   "http://localhost:2000/api/mail",options);
+          //           fetchRes.then(res =>
+          //               res.json()).then(d => {
+          //                   console.log(d)
+          //               })
             firebase.database().ref(`details/${pageName}`).update(updates)
-            console.log(money);
+            // console.log(money);
         }
         console.log(response.razorpay_payment_id);
     },
