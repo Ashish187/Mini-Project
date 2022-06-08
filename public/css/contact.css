@@ -81,6 +81,7 @@
     font-size: 20px;
 }
 .content p{
+    margin-top: 1rem;
     color: black;
 }
 
@@ -104,8 +105,8 @@
     background: rgb(77, 157, 232);
     margin-top: 6rem;
     color: white;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 }
 
 .address2 h2{
@@ -222,16 +223,19 @@ a .inner{
 
 #form-container input{
     width: 40%;
-    margin: 10px;
+    margin: 14px;
     border-top: none;
     border-left: none;
     border-right: none;
     outline: none;
+    font-weight: 600;
 }
 
 #form-container textarea{
     width: 40%;
     margin: 10px;
+    border-radius: 10px;
+    font-weight: 600;
 }
 
 #form-container .btn{
