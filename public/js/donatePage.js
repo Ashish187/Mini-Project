@@ -39,6 +39,31 @@ var firebaseConfig = {
       var progress = document.createElement('div')
       progress.classList.add('progress')
 
+      var download = document.createElement('div')
+      download.classList.add('download')
+
+      var share = document.createElement('a')
+      share.classList.add('share')
+
+      // const whatsappBtn = document.querySelector(".share");
+
+      function init(){
+        let postUrl = encodeURI(document.location.href);
+      let postTitle = encodeURI("Hi everyone, please check this out: ");
+
+      share.setAttribute(
+        "href",
+        `https://wa.me/?text=${postTitle} ${postUrl}`
+      );
+      }
+      init()
+
+      var dcertificate = document.createElement('a')
+      dcertificate.classList.add('dcert')
+
+      // share.setAttribute('href',"#")
+      dcertificate.setAttribute('href',"#")
+
       var circleWrap = document.createElement('div')
       circleWrap.classList.add('circle-wrap')
       
@@ -83,12 +108,16 @@ var firebaseConfig = {
       create.innerText = "Help "+`${name}`
       para.innerText = `${description}`
       main.innerHTML = "iSupport will not charge any fee on your donation to this campaign"
+      share.innerText = "Share"
+      dcertificate.innerText = "Download Certificate"
       btn.innerText = "Donate Now"
       donate.innerHTML = "Donate"
       line.innerText = "Recieve tax benefits by donating to this cause"
       
       image1.style.background = `url("${photo}")`;
       image1.style.backgroundSize="cover";
+
+      
       let c=0;
       if(newmoney>0){
         while (newmoney!=updateMoney && newmoney>0) {
@@ -121,12 +150,15 @@ var firebaseConfig = {
       maskHalf.appendChild(fill1)
       progress.appendChild(circleWrap)
       progress.appendChild(divmoney)
+      download.appendChild(share)
+      download.appendChild(dcertificate)
       _tag1.appendChild(line)
       _tag1.appendChild(btn)
       _tag.appendChild(main)
       _tag.appendChild(create)
       _tag.appendChild(image1)
       _tag.appendChild(progress)
+      _tag.appendChild(download)
       _tag.appendChild(para)
       topic.appendChild(_tag)
       topic.appendChild(_tag1)

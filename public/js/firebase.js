@@ -24,7 +24,8 @@
     var updateMoney = document.querySelector('#money1').value;
     var description = document.querySelector('#description').value;
     var photo = document.querySelector('#photo').value;
-    console.log(name, cause, email, phone, tag, money,updateMoney, description, photo);
+    var certificate = document.querySelector('#certificate').value
+    console.log(name, cause, email, phone, tag, money,updateMoney, description, photo,certificate);
     if(money<=2000){
       alert("Amount should be greater than 2000")
     }
@@ -34,31 +35,32 @@
     }
     
     else{
-      saveDetails(name, cause, email, phone, tag, money,updateMoney,  description, photo);
+      saveDetails(name, cause, email, phone, tag, money,updateMoney,  description, photo,certificate);
       document.querySelector("#register").reset();
       alert("Successfully Submitted")
     }
     
   }
 
- 
-  
 
-function saveDetails(name, cause, email, phone, tag, money,updateMoney,  description, photo) {
+function saveDetails(name, cause, email, phone, tag, money,updateMoney,  description, photo,certificate) {
    let info = firebase.database().ref("details/");
     let newInfo = info.push().key;
 
     const ref = firebase.storage().ref()
 
     const file = document.querySelector("#photo").files[0]
+    const file1 = document.querySelector("#certificate").files[0]
 
     const fileName = new Date() + '-' + file.name
+    const fileName1 = new Date() + '-' + file1.name
 
     const metadata = {
       contentType: file.type
     }
 
     const uploadTask = ref.child(fileName).put(file);
+  
 
     uploadTask.on('state_changed', 
   (snapshot) => {
@@ -79,6 +81,26 @@ function saveDetails(name, cause, email, phone, tag, money,updateMoney,  descrip
   () => {
     uploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {
       console.log('File available at', downloadURL);
+      const uploadTask1 = ref.child(fileName1).put(file1);
+      uploadTask1.on('state_changed', 
+  (snapshot) => {
+    var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+    console.log('Upload is ' + progress + '% done');
+    switch (snapshot.state) {
+      case firebase.storage.TaskState.PAUSED: 
+        console.log('Upload is paused');
+        break;
+      case firebase.storage.TaskState.RUNNING:
+        console.log('Upload is running');
+        break;
+    }
+  }, 
+  (error) => {
+    
+  }, 
+  () => {
+    uploadTask1.snapshot.ref.getDownloadURL().then((downloadURL1) => {
+      console.log('File available at', downloadURL1);
       info.child(newInfo).set({
         name: name,
         cause: cause,
@@ -90,8 +112,12 @@ function saveDetails(name, cause, email, phone, tag, money,updateMoney,  descrip
         updateMoney: updateMoney,
         description: description,
         photo: downloadURL,
+        certificate:downloadURL1
+    })
+
+    })
     });
-    });
+    })
   }
 );
 
