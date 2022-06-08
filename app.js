@@ -23,6 +23,10 @@ app.get('/donate',(req,res)=>{
     res.render('donate')
 })
 
+app.get('/contact',(req,res)=>{
+    res.render('contact')
+})
+
 app.get('/details',(req,res)=>{
     res.render('details')
 })

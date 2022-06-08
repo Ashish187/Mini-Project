@@ -1,0 +1,247 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+/*----------------------- Navbar-Section--------------------------- */
+.dropdown-item:active{
+    background-color: rgb(180, 169, 187) !important;
+}
+.navbar{
+    /* background: linear-gradient(to bottom,rgb(228, 228, 228),rgb(255, 255, 255)) !important; */
+    background-color: #f7f7f7 !important;
+    box-shadow: 0 .2rem .2rem rgba(0, 0, 0, .2);
+    padding: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    z-index: 10000;
+   
+}
+.navbar-transparent{
+    background: linear-gradient(to bottom,rgba(228, 228, 228, 0.694),rgba(255, 255, 255, 0.694)) !important;
+    transition: .5s ease-in;
+}
+.navbar:hover{
+    background-color: white;
+}
+.nav-item a.nav-link{
+    font-size: 18px;
+    color:black !important ;
+    margin-left: 2rem !important;
+}
+.navbar .navbar-brand{
+    font-weight: 500;
+}
+.nav-item a:hover{
+    color:rgb(187, 178, 206) !important ;
+}
+.nav-logo{
+    border-radius: 50%;
+    padding: 5px;
+}
+.navbar-light .navbar-toggler{
+    border: none;;
+}
+.navbar-light .navbar-toggler:focus{
+    outline: none;
+}
+
+.contact-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding-top: 5rem;
+    background-color: #9C3353;
+    color: white;
+    padding-left: 16rem;
+    padding-bottom: 5rem;
+}
+
+.contact-container .head{
+    padding-top: 4rem;
+    font-size: 18px;
+}
+
+.contact-container img{
+    padding-left: 10rem;
+}
+
+.table-list{
+    display: flex;
+    /* margin-left: 20rem; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.table-list i{
+    font-size: 20px;
+}
+.content p{
+    color: black;
+}
+
+.table-list .content .font{
+    display: flex;
+    flex-direction: column;
+    margin-right: 40rem;
+    padding: 4px;
+}
+
+.font .mobile{
+    margin-right: 10rem;
+    padding-top: 14px;
+}
+
+.table-list .map{
+    margin-top: 2rem;
+}
+
+.address2{
+    background: rgb(77, 157, 232);
+    margin-top: 6rem;
+    color: white;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.address2 h2{
+    margin-left: 6rem;
+}
+
+.address2 p{
+    margin-left: 6rem;
+}
+
+.social-icons{
+    display: flex;
+    margin-left: 5rem;
+    /* justify-content: center;
+    align-items: center; */
+    
+}
+
+.social{
+    border: 2px solid #fff;
+    padding: 0px 10px 0 5px;
+    border-radius: 8px;
+    margin-right: 10px;
+    width: 280px;
+    margin-left: 20px;
+}
+
+.social a{
+    text-decoration: none;
+}
+
+a .inner{
+    color: white;
+}
+
+.inner .social-icon{
+    background: url(https://pages.milaap.org/wp-content/uploads/2022/02/instagram-icon.png);
+    width: 52px !important;
+    height: 47px !important;
+    display: inline-block;
+}
+
+.social-icon .icon-instagram,.media{
+    display: none;
+}
+
+.inner .count{
+    display: inline-block;
+    vertical-align: top;
+    padding: 15px 0;
+}
+
+.inner .media-type{
+    margin-left: 5px;
+}
+
+.innerf{
+    color: white;
+}
+
+.innerf .social-iconf{
+    background: url(https://pages.milaap.org/wp-content/uploads/2022/02/facebook-icon.png);
+    width: 52px !important;
+    height: 47px !important;
+    display: inline-block;
+}
+
+.social-iconf .icon-facebook,.mediaf{
+    display: none;
+}
+
+.innerf .countf{
+    display: inline-block;
+    vertical-align: top;
+    padding: 15px 0;
+}
+.innert{
+    color: white;
+}
+
+.innert .social-icont{
+    background: url(	https://pages.milaap.org/wp-content/uploads/2022/02/twitter-icon.png);
+    width: 52px !important;
+    height: 47px !important;
+    display: inline-block;
+}
+
+.social-icont .icon-twitter,.mediat{
+    display: none;
+}
+
+.innert .countt{
+    display: inline-block;
+    vertical-align: top;
+    padding: 15px 0;
+}
+
+.forms{
+    margin-top: 6rem;
+}
+
+.forms h2{
+    margin-left: 28.8rem;
+}
+
+#form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    margin-top: 2rem;
+}
+
+#form-container input{
+    width: 40%;
+    margin: 10px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+}
+
+#form-container textarea{
+    width: 40%;
+    margin: 10px;
+}
+
+#form-container .btn{
+    width: 200px !important;
+    background: #9c3353 !important;
+    color: #fff !important;
+    font-size: 20px !important;
+    padding: 15px 10px !important;
+    font-weight: normal !important;
+    border-radius: 30px !important;
+    margin-top: 25px !important;
+    margin-left: 26rem;
+}

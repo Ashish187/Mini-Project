@@ -141,6 +141,12 @@ body {
   margin-top: 2rem;
 }
 
+.filter-categories .categories-list{
+  display: flex;
+  flex-direction: column;
+  margin-right: 15rem;
+}
+
 .filter-categories .filter-container .subtitle2{
   display: flex;
   flex-direction: column;
@@ -166,7 +172,6 @@ ul .category{
     font-size: 14px;
     cursor: pointer;
     list-style: none;
-    padding-right: 22rem;
 }
 
 .category:hover{

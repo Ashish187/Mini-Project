@@ -139,6 +139,7 @@ var firebaseConfig = {
     createList(object,arr);
 
     var applyBtn = document.querySelector('.apply-btn')
+    
 
     applyBtn.addEventListener('click',()=>{
       var newObject = {};
@@ -152,14 +153,53 @@ var firebaseConfig = {
             }
           }
         }
-        document.getElementById('popup-1').classList.remove("active")
+        // document.getElementById('popup-1').classList.remove("active")
+        // var newarr = Object.keys(object)
+        // console.log(newarr,object);
+        // createList(object,newarr);
+      }
+
+      else if(document.getElementById('medical1').checked){
+        for(let i=0;i<n-1;i++){
+          for(let j=0;j<n-1-i;j++){
+              if(object[arr[j]].cause=="Medical"){
+                let temp=object[arr[j]]
+                if(temp==object[arr[j+1]].cause){
+                  object[arr[j]]=object[arr[j+1]];
+                  object[arr[j+1]]=temp
+                }
+                else{
+                  object[arr[j]]=temp;
+                }
+              }
+              else
+              continue
+          }
+          
+        }
+        // document.getElementById('popup-1').classList.remove("active")
+        // var newarr = Object.keys(object)
+        // // console.log(newarr,object);
+        // createList(object,newarr);
+      }
+      document.getElementById('popup-1').classList.remove("active")
         var newarr = Object.keys(object)
         // console.log(newarr,object);
         createList(object,newarr);
-      }
       // else
       // createList(object,arr);
     })
+
+    // applyBtn.addEventListener('click',()=>{
+    //   if(document.getElementById('medical1').checked){
+    //     for(let i=0;i<n-1;i++){
+    //       if(object[arr[i]].cause = 'Medical')
+    //         return object[arr[i]]
+    //     }
+    //     document.getElementById('popup-1').classList.remove("active")
+    //     document.getElementById('medical1').style.color = 'blue'
+    //   }
+    // })
     
     // console.log(object,arr);
     

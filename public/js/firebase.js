@@ -10,7 +10,6 @@
   firebase.initializeApp(firebaseConfig);
   
 
-
   document.querySelector("#register").addEventListener("submit", submitForm);
 
   function submitForm(e) {
