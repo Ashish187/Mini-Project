@@ -218,6 +218,11 @@
   text-decoration: none;
 }
 
+.share:hover{
+  color: black;
+  background-color: #6fed9d;
+}
+
 .download .dcert{
   background: black;
   color: white;
@@ -229,4 +234,9 @@
   padding-top: 0;
   text-align: center;
   text-decoration: none;
+}
+
+.dcert:hover{
+  color: black;
+  background: yellow;
 }

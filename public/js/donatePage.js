@@ -53,16 +53,19 @@ var firebaseConfig = {
 
       share.setAttribute(
         "href",
-        `https://wa.me/?text=${postTitle} ${postUrl}`
+        `https://wa.me/?text=${postTitle} ${postUrl}`,'_blank'
       );
+      // window.open(`https://wa.me/?text=${postTitle} ${postUrl}`,'_blank')
       }
       init()
+
+      // download.setAttribute("href",)
 
       var dcertificate = document.createElement('a')
       dcertificate.classList.add('dcert')
 
       // share.setAttribute('href',"#")
-      dcertificate.setAttribute('href',"#")
+      
 
       var circleWrap = document.createElement('div')
       circleWrap.classList.add('circle-wrap')
@@ -93,6 +96,12 @@ var firebaseConfig = {
 
       let name = object.name
       let photo = object.photo
+      let certificate = object.certificate
+      console.log(photo);
+      console.log(certificate);
+
+      dcertificate.setAttribute('href',certificate)
+      // dcertificate.setAttribute('download',"download")
       let description = object.description
       let tag = object.tag
       let cause = object.cause
@@ -101,15 +110,15 @@ var firebaseConfig = {
       let phone = object.phone
       let email = object.email
       let newmoney = money;
-      console.log(newmoney);
-      console.log(updateMoney);
+      // console.log(newmoney);
+      // console.log(updateMoney);
       let x=updateMoney/500;
       let y=100/x;
       create.innerText = "Help "+`${name}`
       para.innerText = `${description}`
       main.innerHTML = "iSupport will not charge any fee on your donation to this campaign"
       share.innerText = "Share"
-      dcertificate.innerText = "Download Certificate"
+      dcertificate.innerText = "Download Medical Certificate"
       btn.innerText = "Donate Now"
       donate.innerHTML = "Donate"
       line.innerText = "Recieve tax benefits by donating to this cause"
@@ -135,7 +144,7 @@ var firebaseConfig = {
         insideCircle.innerHTML = `${100}%`
         firebase.database().ref(`details/${pageName}`).remove()
       }
-      console.log(money);
+      // console.log(money);
       var order_id = document.querySelector("#order_id");
 
       let info = "";
