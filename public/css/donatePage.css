@@ -54,20 +54,19 @@
 }
 
 .donate-grid .donate-1 .progress{
-    display: grid;
-    grid-template-columns: 2fr 2fr;
-    width: 441px;
-    height: 157px;
-    margin-top: 1rem;
-    /* margin-left: rem; */
-    background: white;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  width: 705px;
+  height: 136px;
+  margin-top: 1rem;
+  background: white;
 }
 
 .donate-grid .donate-1 .progress .money{
-    padding-left: 3rem;
-    padding-top: 2rem;
-    font-weight: bolder;
-    font-size: 28px;
+  padding-left: 1rem;
+  padding-top: 2rem;
+  font-weight: bolder;
+  font-size: 38px;
 }
 .circle-wrap {
     margin: 0px auto;
@@ -95,11 +94,11 @@
   .circle-wrap .inside-circle {
     /* width: 122px;
     height: 122px; */
-    width: 95px;
-      height: 96px;
+    width: 118px;
+    height: 114px;
     border-radius: 50%;
     background: #d2eaf1;
-    line-height: 104px;
+    line-height: 119px;
     text-align: center;
     margin-top: 14px;
     margin-left: 14px;
@@ -110,31 +109,6 @@
     font-size: 2em;
   }
   
-  /* .mask .fill {
-    clip: rect(0px, 75px, 150px, 0px);
-    background-color: #1e51dc;
-  } */
-  
-  /* .mask.full,
-  .circle .fill {
-    animation: fill ease-in-out 3s;
-    transform: rotate(135deg);
-    1e51dc
-  } */
-  
-  /* @keyframes fill{
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(135deg);
-    }
-  } */
-
-/* .donate-grid .donate-1{
-    margin-bottom: 5rem;
-} */
-
 .donate-grid .donate-1 .img1{
     width: 89.5%;
     height: 450px;
@@ -144,7 +118,7 @@
 }
 
 .donate-grid .donate-1 .para1{
-    /* margin-top: 8rem; */
+    margin-top: 2rem;
     margin-left: 5rem;
 }
 
@@ -159,12 +133,17 @@
 }
 
 .donate-grid .pay .btn-1{
-    width: 42%;
-    height: 34px;
+    /* width: 42%;
+    height: 34px;*/
     margin-top: 10rem;
-    margin-left: 7.2rem;
-    /* margin-left: 5rem;
-    padding-top: 10rem; */
+    margin-left: 6rem; 
+    width: 200px !important;
+    background: #9c3353 !important;
+    color: #fff !important;
+    font-size: 20px !important;
+    padding: 15px 10px !important;
+    font-weight: normal !important;
+    border-radius: 30px !important;
 }
 .head{
     text-align: center;
@@ -213,6 +192,7 @@
   font-size: 20px;
   width: 96%;
   padding-top: 0;
+  margin-left: 3rem;
   background-color: #25d366;
   text-align: center;
   text-decoration: none;
@@ -220,10 +200,11 @@
 
 .share:hover{
   color: black;
-  background-color: #6fed9d;
+  background-color: #21e469;
 }
 
 .download .dcert{
+  margin-left: 3rem;
   background: black;
   color: white;
   border-radius: 24px;
@@ -238,7 +219,7 @@
 
 .dcert:hover{
   color: black;
-  background: yellow;
+  background: rgb(112, 110, 110);
 }
 
 .community{
@@ -302,4 +283,26 @@
   font-size: 18px;
   color: black;
   margin-top: 2rem;
+}
+
+.person{
+  border: 2px solid #e0e1e3;
+    background: #fff;
+    width: 176px;
+    padding: 11px;
+    height: 120px;
+    margin-left: 5rem;
+    letter-spacing: 1px;
+}
+
+.story{
+  margin-top: 2rem;
+  margin-left: 5rem;
+  width: 200px !important;
+  background: #9c3353 !important;
+  color: #fff !important;
+  font-size: 20px !important;
+  padding: 15px 72px !important;
+  font-weight: normal !important;
+  border-radius: 30px !important
 }

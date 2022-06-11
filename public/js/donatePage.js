@@ -45,6 +45,12 @@ var firebaseConfig = {
       var share = document.createElement('a')
       share.classList.add('share')
 
+      var person = document.createElement('div')
+      person.classList.add('person')
+
+      var story = document.createElement('div')
+      story.classList.add('story')
+
       // const whatsappBtn = document.querySelector(".share");
 
       function init(){
@@ -105,6 +111,8 @@ var firebaseConfig = {
       let description = object.description
       let tag = object.tag
       let cause = object.cause
+      let city = object.city
+      let state = object.state
       let money = object.money
       let updateMoney = object.updateMoney
       let phone = object.phone
@@ -119,6 +127,8 @@ var firebaseConfig = {
       main.innerHTML = "iSupport will not charge any fee on your donation to this campaign"
       share.innerText = "Share"
       dcertificate.innerText = "Download Medical Certificate"
+      person.innerText = `The fundraiser will benefit ${name} from ${city},${state}`
+      story.innerText = "Story"
       btn.innerText = "Donate Now"
       donate.innerHTML = "Donate"
       line.innerText = "Recieve tax benefits by donating to this cause"
@@ -168,6 +178,8 @@ var firebaseConfig = {
       _tag.appendChild(image1)
       _tag.appendChild(progress)
       _tag.appendChild(download)
+      _tag.appendChild(person)
+      _tag.appendChild(story)
       _tag.appendChild(para)
       topic.appendChild(_tag)
       topic.appendChild(_tag1)

@@ -56,10 +56,17 @@ var firebaseConfig = {
       var line = document.createElement('div')
       line.classList.add('line')
 
+      var rname = document.createElement('div')
+      rname.classList.add('rname')
+
+      var cname = document.createElement('div')
+      cname.classList.add('cname')
+
       // let childObjectKeys = Object.keys(object[arr[i]]);
       
       let image = object[arr[i]].photo;
       let uname = object[arr[i]].name
+      let ucause = object[arr[i]].cause
       let umoney = object[arr[i]].money
       let updateMoney = object[arr[i]].updateMoney
       let newmoney = umoney;
@@ -88,7 +95,8 @@ var firebaseConfig = {
       // console.log(arr[i]);
       _tag.setAttribute("href",`/donatePage/${object[arr[i]].id}`)
       main.innerHTML = "Save Lives against the COVID-19 second wave"
-      create.innerText = "Created By\n"+`${uname}`
+      rname.innerText = "Created By\n"+`${uname}`
+      cname.innerText = "Raised For\n"+`${ucause}`
       // money.innerHTML = "Raised "+`${umoney}`
       // insideCircle.innerHTML = "75%"
       line.innerText = "Recieve tax benefits by donating to this cause"
@@ -111,6 +119,8 @@ var firebaseConfig = {
       maskHalf.appendChild(fill1)
       progress.appendChild(circleWrap)
       progress.appendChild(money)
+      create.appendChild(rname)
+      create.appendChild(cname)
       raise.appendChild(create)
       raise.appendChild(progress)
       _tag.appendChild(line)
@@ -159,29 +169,29 @@ var firebaseConfig = {
         // createList(object,newarr);
       }
 
-      else if(document.getElementById('medical1').checked){
-        for(let i=0;i<n-1;i++){
-          for(let j=0;j<n-1-i;j++){
-              if(object[arr[j]].cause=="Medical"){
-                let temp=object[arr[j]]
-                if(temp==object[arr[j+1]].cause){
-                  object[arr[j]]=object[arr[j+1]];
-                  object[arr[j+1]]=temp
-                }
-                else{
-                  object[arr[j]]=temp;
-                }
-              }
-              else
-              continue
-          }
+      // else if(document.getElementById('medical1').checked){
+      //   for(let i=0;i<n-1;i++){
+      //     for(let j=0;j<n-1-i;j++){
+      //         if(object[arr[j]].cause=="Medical"){
+      //           let temp=object[arr[j]]
+      //           if(temp==object[arr[j+1]].cause){
+      //             object[arr[j]]=object[arr[j+1]];
+      //             object[arr[j+1]]=temp
+      //           }
+      //           else{
+      //             object[arr[j]]=temp;
+      //           }
+      //         }
+      //         else
+      //         continue
+      //     }
           
-        }
-        // document.getElementById('popup-1').classList.remove("active")
-        // var newarr = Object.keys(object)
-        // // console.log(newarr,object);
-        // createList(object,newarr);
-      }
+      //   }
+      //   // document.getElementById('popup-1').classList.remove("active")
+      //   // var newarr = Object.keys(object)
+      //   // // console.log(newarr,object);
+      //   // createList(object,newarr);
+      // }
       document.getElementById('popup-1').classList.remove("active")
         var newarr = Object.keys(object)
         // console.log(newarr,object);

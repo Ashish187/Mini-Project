@@ -325,6 +325,8 @@ ul .category{
     margin-left: 10px;
      line-height: 25px;
      margin-top: 1rem;
+     display: flex;
+     flex-direction: column;
  }
 
  .container1 .campaign-list .campaign-list-card .raise .progress{
@@ -411,6 +413,10 @@ ul .category{
   margin-left: 4rem;
   font-size: 18px;
   color: black;
+  margin-top: 2rem;
+}
+
+.cname{
   margin-top: 2rem;
 }
 
