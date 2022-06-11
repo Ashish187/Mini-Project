@@ -1,0 +1,190 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.dropdown-item:active{
+  background-color: rgb(180, 169, 187) !important;
+}
+.navbar{
+  /* background: linear-gradient(to bottom,rgb(228, 228, 228),rgb(255, 255, 255)) !important; */
+  background-color: #f7f7f7 !important;
+  box-shadow: 0 .2rem .2rem rgba(0, 0, 0, .2);
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  z-index: 10000;
+ 
+}
+.navbar-transparent{
+  background: linear-gradient(to bottom,rgba(228, 228, 228, 0.694),rgba(255, 255, 255, 0.694)) !important;
+  transition: .5s ease-in;
+}
+.navbar:hover{
+  background-color: white;
+}
+.nav-item a.nav-link{
+  font-size: 18px;
+  color:black !important ;
+  margin-left: 2rem !important;
+}
+.navbar .navbar-brand{
+  font-weight: 500;
+}
+.nav-item a:hover{
+  color:rgb(187, 178, 206) !important ;
+}
+.nav-logo{
+  border-radius: 50%;
+  padding: 5px;
+}
+.navbar-light .navbar-toggler{
+  border: none;;
+}
+.navbar-light .navbar-toggler:focus{
+  outline: none;
+}
+
+.head{
+    text-align: center;
+    margin-top: 2rem;
+    letter-spacing: 0.6px;
+}
+
+.team{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2rem;
+    margin-top: 10rem;
+    height: 300px;
+}
+
+.team .team-member{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #9c3353;
+    padding: 1rem;
+    height: 85%;
+    width: 80%;
+    border-radius: 2rem;
+    color: white;
+    margin: 33px;
+    position: relative;
+}
+
+.team-member .team-image1{
+    background-image: url(/images/as.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    width: 125px;
+    position: absolute;
+    top: -42%;
+    height: 125px;
+    border: 0.2rem solid white;
+}
+.team-member .team-image2{
+    background-image: url(/images/ay.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    width: 125px;
+    position: absolute;
+    top: -42%;
+    height: 125px;
+    border: 0.2rem solid white;
+}
+.team-member .team-image3{
+    background-image: url(/images/ga.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    position: absolute;
+    top: -42%;
+    width: 125px;
+    height: 125px;
+    border: 0.2rem solid white;
+}
+
+/* .team-member .info{
+    border: 2px solid red;
+    width: 150px;
+    height: 100px;
+    text-align: center;
+    padding-top: 30px;
+} */
+
+
+
+
+
+
+
+.community{
+    /* background-color: #1e51dc; */
+    background: rgb(185, 12, 41);
+    margin-top: 4rem;
+    color: white;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    padding-left: 5rem;
+  }
+  
+  .community h3{
+    padding-top: 0.5rem;
+  }
+  
+  
+  .socialte{
+    border: 2px solid #fff;
+    padding: 0px 10px 0 5px;
+    border-radius: 8px;
+    margin-right: 10px;
+    width: 280px;
+    margin-top: 1.5rem;
+  }
+  
+  .socialte a{
+    text-decoration: none;
+  }
+  
+  .innerte{
+    color: white;
+  }
+  
+  .innerte .social-iconte{
+    /* background: url(	https://pages.milaap.org/wp-content/uploads/2022/02/telegram-icon.png); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 234px !important;
+    height: 64px !important;
+    /* display: inline-block; */
+  }
+  
+  .social-iconte .mediate{
+    margin-left: 2rem;
+    font-size: 30px;
+  }
+  
+  .social-iconte .icon-telegram{
+    background-color: #fff;
+    color: #1e51dc;
+    font-size: 50px;
+    border-radius: 50%;
+  }
+  
+  .c{
+    text-align: center;
+    margin-left: 4rem;
+    font-size: 18px;
+    color: black;
+    margin-top: 2rem;
+  }

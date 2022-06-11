@@ -30,6 +30,10 @@ app.get('/contact',(req,res)=>{
 app.get('/details',(req,res)=>{
     res.render('details')
 })
+
+app.get('/team',(req,res)=>{
+    res.render('team')
+})
 // app.post('/api/mail',(req,res)=>{
 //     console.log(req);
 //     var transporter = nodemailer.createTransport({
