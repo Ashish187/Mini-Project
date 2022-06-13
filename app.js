@@ -31,6 +31,10 @@ app.get('/details',(req,res)=>{
     res.render('details')
 })
 
+app.get('/price',(req,res)=>{
+    res.render('price')
+})
+
 app.get('/team',(req,res)=>{
     res.render('team')
 })
