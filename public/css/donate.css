@@ -167,6 +167,7 @@ body {
 .filter-categories ul{
   display: block;
 }
+
 ul .category{
   padding: 15px;
     font-size: 14px;
@@ -176,7 +177,6 @@ ul .category{
 
 .category:hover{
   background-color: #e1dcdc;
-
 }
 
 .btn2{

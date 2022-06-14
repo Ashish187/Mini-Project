@@ -177,29 +177,35 @@
     border-radius: 25px;
     text-align: center;
     padding: 1rem;
-    margin-top: 3.5rem;
+    margin-top: 3rem;
     margin-left: 6rem;
     padding-bottom: 36px;
 }
 
-.calculation{
+
+.main-calculation .calculation{
     display: grid;
     grid-template-columns: 2fr 2fr;
-    /* padding-top: 5rem; */
     background-color: #9C3353;
     color: white;
     margin-top: 4rem;
-    padding-left: 7rem;
+    padding-left: 4rem;
     padding-bottom: 5rem;
+    display: none;
 }
 
 .calculation .total{
-  margin-top: 2rem;
+  margin-top: 7rem;
+}
+
+.total .calculate{
+  font-size: 54px;
 }
 
 .calculation .pay-calculate{
   text-align: center;
   margin-top: 2rem;
+  margin-left: 25rem;
 }
 
 .pay-calculate .two-col{
@@ -208,27 +214,35 @@
   margin-top: 3rem;
 }
 
+.two-col .one-col{
+  margin-right: 2rem;
+}
+
+.two-col .one-col2{
+  margin-left: 6rem;
+}
+
 
 .one-col #raise{
-  font-size: 18px;
-  margin-right: 5rem;
+  font-size: 19px;
+  margin-right: 5.6rem;
 }
 
 .one-col #plat{
-  font-size: 18px;
+  font-size: 19px;
   margin-right: 1.5rem;
   padding-top: 1.3rem;
 }
 
 .one-col #pay{
-  font-size: 18px;
+  font-size: 19px;
   margin-left: 0.5rem;
   padding-top: 1.3rem;
 }
 
 .one-col2 .raise1{
   font-size: 18px;
-  margin-right: 5rem;
+  margin-right: 5.2rem;
 }
 .one-col2 .plat1{
   font-size: 18px;
@@ -239,4 +253,67 @@
   font-size: 18px;
   margin-right: 5rem;
   padding-top: 1.3rem;
+}
+
+.community{
+  /* background-color: #1e51dc; */
+  background: rgb(185, 12, 41);
+  margin-top: 4rem;
+  color: white;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  padding-left: 5rem;
+}
+
+.community h3{
+  padding-top: 0.5rem;
+}
+
+
+.socialte{
+  border: 2px solid #fff;
+  padding: 0px 10px 0 5px;
+  border-radius: 8px;
+  margin-right: 10px;
+  width: 280px;
+  margin-top: 1.5rem;
+}
+
+.socialte a{
+  text-decoration: none;
+}
+
+.innerte{
+  color: white;
+}
+
+.innerte .social-iconte{
+  /* background: url(	https://pages.milaap.org/wp-content/uploads/2022/02/telegram-icon.png); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 234px !important;
+  height: 64px !important;
+  /* display: inline-block; */
+}
+
+.social-iconte .mediate{
+  margin-left: 2rem;
+  font-size: 30px;
+}
+
+.social-iconte .icon-telegram{
+  background-color: #fff;
+  color: #1e51dc;
+  font-size: 50px;
+  border-radius: 50%;
+}
+
+.c{
+  text-align: center;
+  margin-left: 4rem;
+  font-size: 18px;
+  color: black;
+  margin-top: 2rem;
 }
