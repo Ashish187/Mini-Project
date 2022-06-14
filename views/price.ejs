@@ -39,9 +39,34 @@
                     </div>
                 </div>
                 <div class="slider-container">
-                    <input type="range" min="500" max="1000000" id="myRange" class="slider">
+                    <input type="range" min="500" max="1000000" id="myRange" class="slider" onchange="updateChange(this.value)">
                 </div>
             </div>
-        <script src="js/price.js"></script>
+
+            <div class="cal-container">
+                <button class="btn2">Calculate</button>
+            </div>
+
+            <div class="calculation">
+                <div class="total">
+                    <h3>Consider setting a goal of approx.</h3>
+                </div>
+                
+                <div class="pay-calculate">
+                    <h4 id="head">See Breakup</h4>
+                    <div class="two-col">
+                        <div class="one-col">
+                                <h4 id="raise">Want to raise (₹) :</h4>
+                                <h4 id="plat">iSupport platform fee (₹) :</h4>
+                                <h4 id="pay">Payment gateway charges (₹) :</h4>
+                        </div>
+                        <div class="one-col2">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        <script src="/js/price.js"></script>
 </body>
 </html>

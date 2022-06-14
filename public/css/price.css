@@ -100,8 +100,12 @@
 .price-container{
     width: 500px;
     height: 200px;
-    border: 2px solid red;
+    /* border: 2px solid red; */
+    background: #fff;
+    border-radius: 10px;
     margin: auto;
+    margin-bottom: 3rem;
+    box-shadow: 0 4px 14px 0 rgb(0 0 0 / 16%);
     margin-top: 3rem;
 }
 
@@ -111,6 +115,7 @@
     align-items: center;
     text-align: center;
     margin-top: 4rem;
+    padding-top: 3rem;
 }
 
 .raise .inputtext{
@@ -152,4 +157,86 @@
     box-shadow: 2px 8px 13px -3px rgba(116,114,114,0.75);
     -webkit-box-shadow: 2px 8px 13px -3px rgba(116,114,114,0.75);
     /* -moz-box-shadow: 2px 8px 13px -3px rgba(116,114,114,0.75); */
+}
+
+.cal-container{
+  background-color: #ff2a5f;
+  width: 500px;
+  height: 150px;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.cal-container .btn2{
+  background: white;
+    width: 300px;
+    height: 50px;
+    color: rgb(185, 12, 41);
+    text-align: center;
+    letter-spacing: 0.5px;
+    border-radius: 25px;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 3.5rem;
+    margin-left: 6rem;
+    padding-bottom: 36px;
+}
+
+.calculation{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    /* padding-top: 5rem; */
+    background-color: #9C3353;
+    color: white;
+    margin-top: 4rem;
+    padding-left: 7rem;
+    padding-bottom: 5rem;
+}
+
+.calculation .total{
+  margin-top: 2rem;
+}
+
+.calculation .pay-calculate{
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.pay-calculate .two-col{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 3rem;
+}
+
+
+.one-col #raise{
+  font-size: 18px;
+  margin-right: 5rem;
+}
+
+.one-col #plat{
+  font-size: 18px;
+  margin-right: 1.5rem;
+  padding-top: 1.3rem;
+}
+
+.one-col #pay{
+  font-size: 18px;
+  margin-left: 0.5rem;
+  padding-top: 1.3rem;
+}
+
+.one-col2 .raise1{
+  font-size: 18px;
+  margin-right: 5rem;
+}
+.one-col2 .plat1{
+  font-size: 18px;
+  margin-right: 5rem;
+  padding-top: 1.3rem;
+}
+.one-col2 .pay1{
+  font-size: 18px;
+  margin-right: 5rem;
+  padding-top: 1.3rem;
 }
