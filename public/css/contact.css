@@ -356,7 +356,7 @@ a .inner{
 
     .address2 .social-icons{
         width: 67vw;
-        margin-left: 3rem;
+        margin-left: 2rem;
     }
 
     .content{
@@ -378,8 +378,9 @@ a .inner{
 @media(max-width:580px){
 
     /* .address2{
-        padding-right: 7rem;
-    } */
+        padding-left: 4rem;
+    }
+     */
     .social-icons{
         display: flex;
         flex-direction: column;
@@ -388,6 +389,12 @@ a .inner{
     }
     .social-icons .social{
         margin-left: -1rem;
+    }
+    .address2 h2{
+        margin-left: 2rem;
+    }
+    .address2 p{
+        margin-left: 1rem;
     }
 }
 
@@ -407,6 +414,99 @@ a .inner{
         margin-left: -19rem;
         margin-top: 4rem;
     }
+}
 
-    
+
+@media(max-width: 420px){
+    .map{
+        width: 200px;
+    }
+    .address2 h2{
+        margin-left: 2rem;
+    }
+    .address2 p{
+        margin-left: 1rem;
+    }
+    .contact-container{
+        margin-left: -2rem;
+    }
+}
+
+@media(max-width: 375px){
+    .forms h2{
+        margin-left: 3rem;
+    }
+
+    .community{
+        width: 100vw;
+        margin-right: 3rem;
+    }
+
+    .address2 h2{
+        font-size: 16px;
+    }
+    .contact-container {
+        margin-left: -5rem;
+    }
+    .address2 p{
+        font-size: 16px;
+    }
+
+    .social-icons .social{
+        width: 59vw;
+    font-size: 16px;
+    }
+
+    .count{
+        font-size: 10px;
+    }
+    .countf{
+        font-size: 10px;
+    }
+    .countt{
+        font-size: 10px;
+    }
+
+
+    .community h1{
+        font-size: 16px;
+    margin-right: 2rem;
+    }
+    .community h3{
+        font-size: 16px;
+    margin-right: 2rem;
+    }
+
+    .community .socialte{
+        width: 168px;
+    margin-left: -1rem;
+    }
+
+    .community .socialte .innerte .social-iconte {
+        margin-left: -3rem;
+    }
+
+    .community .socialte .innerte .social-iconte .mediate{
+        font-size: 16px;
+    }
+    .community .socialte .innerte .social-iconte i{
+        font-size: 16px;
+    }
+}
+
+@media(max-width:300px){
+    .head{
+        font-size: 16px;
+    }
+
+    .head h2{
+        font-size: 16px;
+    }
+
+    .contact-container img{
+        width: 300px;
+    margin-left: -15rem;
+    }
+
+
 }
