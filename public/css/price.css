@@ -317,3 +317,148 @@
   color: black;
   margin-top: 2rem;
 }
+
+@media(max-width:1360px){
+  .contact-container .fund{
+    width: 150px;
+    height: 150px;
+    margin-left: -6rem;
+  }
+
+  .contact-container .head{
+    margin-left: -10rem;
+    width: 43%;
+  }
+
+  .contact-container hr{
+    width: 500px;
+  }
+
+  .contact-container .zero{
+    width: 80px;
+    height: 80px;
+  }
+
+  .contact-container .head h2{
+    font-size: 1rem;
+  }
+
+  .contact-container label{
+    font-size: 20px;
+  }
+
+  .contact-container .btn-1{
+    width: 200px;
+  }
+
+}
+
+@media(max-width:980px){
+  .contact-container .fund{
+    width: 100px;
+    height: 100px;
+    margin-left: -10rem;
+  }
+  .contact-container .head{
+    margin-left: -10rem;
+    width: 100%;
+  }
+  .contact-container hr{
+    width: 200px;
+  }
+  .contact-container .zero{
+    width: 60px;
+    height: 60px;
+  }
+
+  .contact-container .head h2{
+    font-size: 0.7rem;
+  }
+
+  .contact-container label{
+    font-size: 15px;
+  }
+
+  .contact-container .btn-1{
+    width: 150px;
+    padding: 0.5rem;
+  }
+}
+
+@media(max-width: 600px){
+  .contact-container .fund{
+    width: 60px;
+    height: 60px;
+    margin-left: -10rem;
+    margin-top: 2rem;
+  }
+
+  .price-container{
+    width: 340px;
+  }
+
+  .price-container .slider-container{
+    width: 17%;
+    margin-left: 1rem;
+}
+
+.slider-container .slider{
+  width: 300px;
+}
+  .cal-container{
+    width: 300px;
+  }
+
+  .cal-container .btn2{
+    width: 200px;
+    margin-left: 2.8rem;
+  }
+}
+
+@media(max-width: 400px){
+
+  /* .contact-container{
+    padding-left: 22rem;
+  } */
+  .contact-container .fund{
+    width: 50px;
+    height: 50px;
+    margin-left: -14rem;
+  }
+  .contact-container .head{
+    margin-left: -10rem;
+    width: 171%;
+  }
+  .contact-container hr{
+    width: 100px;
+  }
+
+  .price-container{
+    width: 200px;
+  }
+
+  .price-container .slider-container{
+    margin-top: 4rem;
+  }
+
+  .price-container .raise{
+    width: 255px;
+  }
+  .price-container .inputtext #amountToRaise{
+    width: 31px;
+  }
+
+  .slider-container .slider{
+    width: 250px;
+    margin-bottom: 2rem;
+  }
+
+  .community .socialte{
+    width: 180px;
+  }
+
+  .community .socialte .innerte .social-iconte .mediate{
+    font-size: 19px;
+    margin-right: 4rem;
+  }
+}

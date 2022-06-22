@@ -56,20 +56,20 @@
                     <li class="category" id="covid1">Covid</li>
                     <li class="category" id="others1">Others</li> -->
                     <label class="category">
-                        <input name="Medical" id="medical1" type="radio">
-                        <span>Medical</span>
+                        <input name="causes" id="medical1" type="radio">
+                        <span id="smedical">Medical</span>
                     </label>
                     <label class="category">
-                        <input name="Education" id="education1" type="radio">
-                        <span>Education</span>
+                        <input name="causes" id="education1" type="radio">
+                        <span id="sedu">Education</span>
                     </label>
                     <label class="category">
-                        <input name="Covid-19" id="covid1" type="radio">
-                        <span>Covid-19</span>
+                        <input name="causes" id="covid1" type="radio">
+                        <span id="scovid">Covid-19</span>
                     </label>
                     <label class="category">
-                        <input name="Others" id="others1" type="radio">
-                        <span>Others</span>
+                        <input name="causes" id="others1" type="radio">
+                        <span id="sother">Others</span>
                     </label>
 
                 </ul>
@@ -95,7 +95,7 @@
       document.getElementById('popup-1').classList.toggle("active")
     }
     var list = document.querySelector('.category').value
-    console.log(list);
+    // console.log(list);
     // list.addEventListener('click',()=>{
     //     console.log("clicked");
     // })

@@ -17,18 +17,6 @@ plat1.classList.add('plat1')
 var pay1 = document.createElement('h4')
 pay1.classList.add('pay1');
 
-// raise1.innerHTML = `${calci}`
-
-// plat1.innerText = `${0}`
-
-// let a = (calci*2)/100;
-// let b=parseInt(calci)
-// let c=parseInt(a+b)
-// console.log(c);
-
-
-// pay1.innerText = `${a}`
-// calculate.innerHTML = `${c}`
 
 btn.addEventListener('click',()=>{
     let calci = document.getElementById('amountToRaise').value
