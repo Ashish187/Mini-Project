@@ -38,32 +38,36 @@ app.get('/price',(req,res)=>{
 app.get('/team',(req,res)=>{
     res.render('team')
 })
-// app.post('/api/mail',(req,res)=>{
-//     console.log(req);
-//     var transporter = nodemailer.createTransport({
-//         service: 'gmail',
-//         auth: {
-//           user: 'ashishanand16086@gmail.com',
-//           pass: 'tumkur@123456'
-//         }
-//       });
+app.post('/api/mail',(req,res)=>{
+    console.log(req);
+    var transporter = nodemailer.createTransport({
+        host: "smtp-mail.outlook.com",
+        secureConnection: false,
+        port: 587, 
+        auth: {
+          user: 'ashishanand16000@outlook.com',
+          pass: 'ashishanand@123456'
+        }
+      });
       
-//       var mailOptions = {
-//         from: 'ashishanand16086@gmail.com',
-//         to: req.body.to,
-//         subject: 'Sending Email using Node.js',
-//         text: 'That was easy!'
-//       };
-      
-//       transporter.sendMail(mailOptions, function(error, info){
-//         if (error) {
-//           console.log(error);
-//         } else {
-//             res.send({status:"success"});
-//           console.log('Email sent: ' + info.response);
-//         }
-//       });
-// })
+      var mailOptions = {
+        from: 'ashishanand16000@outlook.com',
+        to: req.body.sendto,
+        subject: 'iSupport sends You email',
+        text: `
+        You have recieved 500
+        ${req.body.money-500>0?`Your Raised money has been reduced to ${req.body.money-500}`:'Congrats You have recieved all the money you raised'}
+        `
+      };
+      transporter.sendMail(mailOptions, function(error, info){
+        if (error) {
+          console.log(error);
+        } else {
+            res.send({status:"success"});
+          console.log('Email sent: ' + info.response);
+        }
+      });
+})
 
 app.get('/donatePage/:page',(req,res)=>{
     var pageName = req.params.page;

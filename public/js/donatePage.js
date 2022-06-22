@@ -201,6 +201,20 @@ var firebaseConfig = {
         alert(response.razorpay_payment_id);
         // alert(response.razorpay_order_id);
         // alert(response.razorpay_signature)
+
+        $.ajax({
+          url:"/api/mail",
+          method:"post",
+          data:{sendto:`${email}`,money:money},
+          success:function(result,status,xhr){
+            // console.log(money);
+            console.log(result);
+          },
+          error:function(xhr,status,error){
+            console.log(error);
+          }
+        })
+        console.log(money);
         
         var data = {
           email:email
@@ -210,16 +224,6 @@ var firebaseConfig = {
             var updates = {
               money: money-500
             }
-          //   let options = {
-          //     method: 'POST',
-          //     body:JSON.stringify(data)
-          // }
-          // let fetchRes = fetch(
-          //   "http://localhost:2000/api/mail",options);
-          //           fetchRes.then(res =>
-          //               res.json()).then(d => {
-          //                   console.log(d)
-          //               })
             firebase.database().ref(`details/${pageName}`).update(updates)
             // console.log(money);
         }
