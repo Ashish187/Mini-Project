@@ -425,34 +425,101 @@
     .container1 .campaign-list{
         display: flex;
         flex-direction: column;
-        width: 60%;
+        height: 100%;
+    }
+
+    .campaign-list .campaign-list-card{
+        height: 100%;
+    }
+
+    .container1 .campaign-list .campaign-list-card .raise{
+        display: flex;
+        flex-direction: column;
+        width: 226px;
+    }
+
+    .container1 .campaign-list .campaign-list-card .raise .progress{
+        display: flex;
+        flex-direction: column;
+        width: 200px;
     }
 }
 
-@media(max-width: 525px){
+@media(max-width: 560px){
+
+    .container1 .campaign-list{
+        margin-left: 3rem;
+    }
+    .container1 .campaign-list .campaign-list-card{
+        height: 100%;
+    }
+
+    .container1 .campaign-list .campaign-list-card .raise .progress{
+        display: flex;
+        flex-direction: column;
+        width: 150px;
+        height: 200px;
+    }
+
+    .container1 .campaign-list .campaign-list-card .progress .money{
+        text-align: center;
+    }
+}
+
+@media(max-width: 420px){
+
+    .row .col1{
+        width: 200px;
+    }
+
+    .col1 h1{
+        font-size: 20px;
+    }
+    .col1 h2{
+        font-size: 20px;
+    }
+
+    .container .row .btn-1{
+        width: 200px;
+    }
+
+    .row .col2 img{
+        margin-top: 2rem;
+        width: 10rem;
+        height: 14rem;
+    }
     .banners .container{
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 2rem;
     }
-    .row .col2 img{
-        width: 15rem;
-        height: 24rem;
-    }
-    .sec-2 .content{
-        display: flex;
-        flex-direction: column;
-    }
-    .container1{
-        margin-top: 18rem;
+
+    .banners .container .numbers-sec{
+        padding-top: 2rem;
+        align-items: flex-start;
     }
 }
 
-@media(max-width: 325px){
-    .row .col2 img{
-        padding-right: 2rem;
+@media(max-width: 370px){
+
+    .container1 .campaign-list .campaign-list-card .raise .progress{
+        margin-left: 0.5rem;
     }
-    .container1 .campaign-list{
-        margin-left: 4rem;
-        width: 80%;
+    .community{
+        padding-left: 2rem;
+    }
+
+    .community .socialte{
+        width: 200px;
+    }
+
+    .social-iconte .mediate{
+        font-size: 20px;
+    }
+
+    .social-iconte .icon-telegram{
+        font-size: 25px;
     }
 }

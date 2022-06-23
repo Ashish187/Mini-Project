@@ -112,20 +112,6 @@
     border: 0.2rem solid white;
 }
 
-/* .team-member .info{
-    border: 2px solid red;
-    width: 150px;
-    height: 100px;
-    text-align: center;
-    padding-top: 30px;
-} */
-
-
-
-
-
-
-
 .community{
     /* background-color: #1e51dc; */
     background: rgb(185, 12, 41);
@@ -187,4 +173,55 @@
     font-size: 18px;
     color: black;
     margin-top: 2rem;
+  }
+
+  @media(max-width: 800px){
+    .team{
+      display: flex;
+      flex-direction: column;
+      height: 1500px;
+      width: 100vw;
+      margin-top: 4rem;
+    }
+
+    .team .team-member{
+      margin-top: 5rem;
+    }
+
+    .team-member .team-image1{
+      top: -20%;
+    }
+    .team-member .team-image2{
+      top: -20%;
+    }
+    .team-member .team-image3{
+      top: -20%;
+    }
+  }
+
+  @media(max-width: 400px){
+    .community{
+      width: 100vw;
+      padding-right: 5rem;
+    }
+
+    .community .socialte{
+      width: 150px;
+    }
+
+    .community h1,h3{
+      font-size: 16px;
+    }
+    .innerte .social-iconte{
+      /* width: 150px; */
+      padding-right: 6rem;
+    }
+
+    .social-iconte .mediate{
+      font-size: 15px;
+    }
+
+    .social-iconte .icon-telegram{
+      font-size: 20px;
+    }
   }

@@ -663,8 +663,7 @@ var firebaseConfig = {
       main.innerHTML = "Save Lives against the COVID-19 second wave"
       rname.innerText = "Created By\n"+`${uname}`
       cname.innerText = "Raised For\n"+`${ucause}`
-      // money.innerHTML = "Raised "+`${umoney}`
-      // insideCircle.innerHTML = "75%"
+      
       line.innerText = "Recieve tax benefits by donating to this cause"
       
       let info = "";
@@ -699,38 +698,11 @@ var firebaseConfig = {
           
         }
         console.log(topic);
-        // console.log(object);
-        // document.getElementById('popup-1').classList.remove("active")
-        // var newarr = Object.keys(object)
-        // // console.log(newarr,object);
-        // createList(object,newarr);
       }
       
       document.getElementById('popup-1').classList.remove("active")
       
-      // else
-      // createList(object,arr);
     })
-
-    // applyBtn.addEventListener('click',()=>{
-    //   if(document.getElementById('medical1').checked){
-    //     for(let i=0;i<n-1;i++){
-    //       if(object[arr[i]].cause = 'Medical')
-    //         return object[arr[i]]
-    //     }
-    //     document.getElementById('popup-1').classList.remove("active")
-    //     document.getElementById('medical1').style.color = 'blue'
-    //   }
-    // })
-    
-    // console.log(object,arr);
-    
-  
-
-    // console.log(object);
-    // for(let k=0;k<n;k++){
-    //   console.log(object[arr[k]].money);
-    // }
     })
   }
   fetchData();
